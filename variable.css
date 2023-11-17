@@ -26,7 +26,7 @@
   --color-primary: #f9f9f9;
   --color-on-primary: #f9f9f9;
   --color-primary-container: #EADDFF;
-  --color-on-primary-container: #f9f9f9;
+  --color-on-primary-container: #21005D;
 
   --color-secondary: #f9f9f9;
   --color-on-secondary: #f9f9f9;
@@ -63,10 +63,12 @@
   --elevation-5: 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 
   /* 3. Icons */
-  --icon-size-sm: 16px;
-  --icon-size-md: 32px;
-  --icon-size-lg: 48px;
-  --icon-size-xl: 64px;
+  --icon-size-bg: #f9f9f9;
+
+  --icon-size-sm: 18px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 26px;
+  --icon-size-xl: 32px;
 
   /* 4. Motion */
   --motion-duration-emphasized: 0.5s;
@@ -120,5 +122,11 @@
 
   /* 8. FAB */
   --fab-color: var(--color-primary-container);
-  --fab-shape: var(--shape-xl);
+  --fab-shape: var(--shape-lg);
+  --fab-width: 56px;
+  --fab-height: 56px;
+  --fab-elevation: var(--elevation-3);
+  --fab-shadow-color: #000000;
+  --fab-lowered-container-elevation: var(--elevation-1);
+
 }

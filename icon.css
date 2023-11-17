@@ -1,0 +1,25 @@
+.pu-icon {
+  text-align: center;
+  background-color: var(--icon-size-bg);
+}
+
+.pu-icon-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.pu-icon,
+.pu-icon-md {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.pu-icon-lg {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+}
+
+.pu-icon-xl {
+  width: var(--icon-size-xl);
+  height: var(--icon-size-xl);
+}

@@ -1,4 +1,7 @@
 .pu-bottom-app-bar {
+  display: flex;
+  justify-content: space-between;
+  
   min-height: var(--bottom-app-bar-height);
   background-color: var(--bottom-app-bar-color);
   border-radius: var(--bottom-app-bar-shape);

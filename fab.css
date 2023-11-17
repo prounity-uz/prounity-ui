@@ -1,0 +1,15 @@
+.pu-fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--fab-color);
+  border-radius: var(--fab-shape);
+  box-shadow: var(--fab-elevation) var(--fab-shadow-color);
+  width: var(--fab-width);
+  height: var(--fab-height);
+}
+
+.pu-fab .pu-icon {
+  color: var(--color-on-primary-container);
+}
