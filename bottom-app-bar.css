@@ -1,0 +1,10 @@
+.pu-bottom-app-bar {
+  min-height: var(--bottom-app-bar-height);
+  background-color: var(--bottom-app-bar-color);
+  border-radius: var(--bottom-app-bar-shape);
+  box-shadow: var(--bottom-app-bar-elevation);
+  padding-left: var(--bottom-app-bar-left-padding);
+  padding-right: var(--bottom-app-bar-right-padding);
+  padding-top: var(--bottom-app-bar-top-padding);
+  padding-bottom: var(--bottom-app-bar-bottom-padding);
+}
