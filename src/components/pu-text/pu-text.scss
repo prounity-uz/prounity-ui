@@ -1,0 +1,64 @@
+:host {
+  display: block;
+  font-family: $typeface-plain;
+}
+
+:host(.pu-display-text) {
+  @include display-text;
+}
+
+:host(.pu-display-text-large) {
+  @include display-text-large;
+}
+
+:host(.pu-display-text-small) {
+  @include display-text-small;
+}
+
+:host(.pu-headline-text) {
+  @include headline-text;
+}
+
+:host(.pu-headline-text-large) {
+  @include headline-text-large;
+}
+
+:host(.pu-headline-text-small) {
+  @include headline-text-small;
+}
+
+:host(.pu-title-text) {
+  @include title-text;
+}
+
+:host(.pu-title-text-large) {
+  @include title-text-large;
+}
+
+:host(.pu-title-text-small) {
+  @include title-text-small;
+}
+
+:host(.pu-body-text) {
+  @include body-text;
+}
+
+:host(.pu-body-text-large) {
+  @include body-text-large;
+}
+
+:host(.pu-body-text-small) {
+  @include body-text-small;
+}
+
+:host(.pu-label-text) {
+  @include label-text;
+}
+
+:host(.pu-label-text-large) {
+  @include label-text-large;
+}
+
+:host(.pu-label-text-small) {
+  @include label-text-small;
+}

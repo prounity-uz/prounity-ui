@@ -1,0 +1,18 @@
+$elevation1: rgba($color-shadow, 0.2) 0px 2px 1px -1px, rgba($color-shadow, 0.14) 0px 1px 1px 0px, rgba($color-shadow, 0.12) 0px 1px 3px 0px;
+$elevation2: rgba($color-shadow, 0.2) 0px 3px 3px -2px, rgba($color-shadow, 0.14) 0px 3px 4px 0px, rgba($color-shadow, 0.12) 0px 1px 8px 0px;
+$elevation3: rgba($color-shadow, 0.2) 0px 3px 5px -1px, rgba($color-shadow, 0.14) 0px 6px 10px 0px, rgba($color-shadow, 0.12) 0px 1px 18px 0px;
+$elevation4: rgba($color-shadow, 0.2) 0px 5px 5px -3px, rgba($color-shadow, 0.14) 0px 8px 10px 1px, rgba($color-shadow, 0.12) 0px 3px 14px 2px;
+$elevation5: rgba($color-shadow, 0.2) 0px 7px 8px -4px, rgba($color-shadow, 0.14) 0px 12px 17px 2px, rgba($color-shadow, 0.12) 0px 5px 22px 4px;
+
+@function box-shadow($level) {
+  $elevation: (
+    0: none,
+    1: $elevation1,
+    2: $elevation2,
+    3: $elevation3,
+    4: $elevation4,
+    5: $elevation5
+  );
+  
+  @return map-get($elevation, $level);
+}

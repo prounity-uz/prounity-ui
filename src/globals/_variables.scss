@@ -1,0 +1,163 @@
+$primary0: #000000;
+$primary10: #21005d;
+$primary20: #381e72;
+$primary30: #4f378b;
+$primary40: #6750a4;
+$primary50: #7f67be;
+$primary60: #9a82db;
+$primary70: #b69df8;
+$primary80: #d0bcff;
+$primary90: #eaddff;
+$primary95: #f6edff;
+$primary99: #fffbfe;
+$primary100: #ffffff;
+$primary98: #f8f9ff;
+
+$secondary0: #000000;
+$secondary10: #1d192b;
+$secondary20: #332d41;
+$secondary30: #4a4458;
+$secondary40: #625b71;
+$secondary50: #7a7289;
+$secondary60: #958da5;
+$secondary70: #b0a7c0;
+$secondary80: #ccc2dc;
+$secondary90: #e8def8;
+$secondary95: #f6edff;
+$secondary99: #fffbfe;
+$secondary100: #ffffff;
+$secondary98: #f8f9ff;
+
+$tertiary0: #000000;
+$tertiary10: #31111d;
+$tertiary20: #492532;
+$tertiary30: #633b48;
+$tertiary40: #7d5260;
+$tertiary50: #986977;
+$tertiary60: #b58392;
+$tertiary70: #d29dac;
+$tertiary80: #efb8c8;
+$tertiary90: #ffd8e4;
+$tertiary95: #ffecf1;
+$tertiary99: #fffbfa;
+$tertiary100: #ffffff;
+$tertiary98: #fff7fd;
+
+$error0: #000000;
+$error10: #410e0b;
+$error20: #601410;
+$error30: #8c1d18;
+$error40: #b3261e;
+$error50: #dc362e;
+$error60: #e46962;
+$error70: #ec928e;
+$error80: #f2b8b5;
+$error90: #f9dedc;
+$error95: #fceeee;
+$error99: #fffbf9;
+$error100: #ffffff;
+$error98: #fff8f7;
+
+$neutral0: #000000;
+$neutral4: #0f0d13;
+$neutral6: #141218;
+$neutral10: #1d1b20;
+$neutral12: #211f26;
+$neutral17: #2b2930;
+$neutral20: #322f35;
+$neutral22: #36343b;
+$neutral24: #3b383e;
+$neutral30: #48464c;
+$neutral40: #605d64;
+$neutral50: #79767d;
+$neutral60: #938f96;
+$neutral70: #aea9b1;
+$neutral80: #cac5cd;
+$neutral87: #ded8e1;
+$neutral90: #e6e0e9;
+$neutral92: #ece6f0;
+$neutral94: #f3edf7;
+$neutral95: #f5eff7;
+$neutral96: #f7f2fa;
+$neutral99: #fffbff;
+$neutral100: #ffffff;
+$neutral98: #fef7ff;
+
+$neutral-variant0: #000000;
+$neutral-variant10: #1d1a22;
+$neutral-variant20: #322f37;
+$neutral-variant30: #49454f;
+$neutral-variant40: #605d66;
+$neutral-variant50: #79747e;
+$neutral-variant60: #938f99;
+$neutral-variant70: #aea9b4;
+$neutral-variant80: #cac4d0;
+$neutral-variant90: #e7e0ec;
+$neutral-variant95: #f5eefa;
+$neutral-variant99: #fffbfe;
+$neutral-variant100: #ffffff;
+$neutral-variant98: #f8f9ff;
+
+$color-primary: $primary40;
+$color-on-primary: $primary100;
+$color-primary-container: $primary90;
+$color-on-primary-container: $primary10;
+$color-primary-fixed: $primary90;
+$color-primary-fixed-dim: $primary80;
+$color-on-primary-fixed: $primary10;
+$color-on-primary-fixed-variant: $primary30;
+
+$color-secondary: $secondary40;
+$color-on-secondary: $secondary100;
+$color-secondary-container: $secondary90;
+$color-on-secondary-container: $secondary10;
+$color-secondary-fixed: $secondary90;
+$color-secondary-fixed-dim: $secondary80;
+$color-on-secondary-fixed: $secondary10;
+$color-on-secondary-fixed-variant: $secondary30;
+
+$color-tertiary: $tertiary40;
+$color-on-tertiary: $tertiary100;
+$color-tertiary-container: $tertiary90;
+$color-on-tertiary-container: $tertiary10;
+$color-tertiary-fixed: $tertiary90;
+$color-tertiary-fixed-dim: $tertiary80;
+$color-on-tertiary-fixed: $tertiary10;
+$color-on-tertiary-fixed-variant: $tertiary30;
+
+$color-error: $error40;
+$color-on-error: $error100;
+$color-error-container: $error90;
+$color-on-error-container: $error10;
+
+$color-surface-dim: $neutral87;
+$color-surface: $neutral98;
+$color-surface-bright: $neutral98;
+
+$color-surface-container: $neutral94;
+$color-surface-container-lowest: $neutral100;
+$color-surface-container-low: $neutral96;
+$color-surface-container-high: $neutral92;
+$color-surface-container-highest: $neutral90;
+
+$color-on-surface: $neutral10;
+$color-on-surface-variant: $neutral-variant30;
+$color-outline: $neutral-variant50;
+$color-outline-variant: $neutral-variant80;
+
+$color-inverse-surface: $neutral20;
+$color-inverse-on-surface: $neutral95;
+$color-inverse-primary: $primary80;
+
+$color-scrim: $neutral0;
+$color-shadow: $neutral0;
+
+$color-custom: $primary40;
+$color-on-custom: $primary100;
+$color-custom-container: $primary90;
+$color-on-custom-container: $primary10;
+
+$outline-width: 1px;
+$typeface-plain: 'Roboto', sans-serif;
+
+$shape-corner-medium: 12px;

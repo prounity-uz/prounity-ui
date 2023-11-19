@@ -1,0 +1,60 @@
+.pu-display-text {
+  color: red;
+  @include display-text;
+}
+
+.pu-display-text-large {
+  @include display-text-large;
+}
+
+.pu-display-text-small {
+  @include display-text-small;
+}
+
+.pu-headline-text {
+  @include headline-text;
+}
+
+.pu-headline-text-large {
+  @include headline-text-large;
+}
+
+.pu-headline-text-small {
+  @include headline-text-small;
+}
+
+.pu-title-text {
+  @include title-text;
+}
+
+.pu-title-text-large {
+  @include title-text-large;
+}
+
+.pu-title-text-small {
+  @include title-text-small;
+}
+
+.pu-body-text {
+  @include body-text;
+}
+
+.pu-body-text-large {
+  @include body-text-large;
+}
+
+.pu-body-text-small {
+  @include body-text-small;
+}
+
+.pu-label-text {
+  @include label-text;
+}
+
+.pu-label-text-large {
+  @include label-text-large;
+}
+
+.pu-label-text-small {
+  @include label-text-small;
+}
