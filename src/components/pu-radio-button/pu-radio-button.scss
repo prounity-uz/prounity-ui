@@ -1,15 +1,38 @@
 :host {
   --width: 20px;
   --height: 20px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  color: transparent;
 }
 .radio-button {
   width: var(--width);
   height: var(--height);
-  accent-color: $color-primary;
+  border: 1px solid $color-on-surface-variant;
+  border-radius: 50%;
+  margin: 0;
+  -webkit-appearance: none;
+  position: absolute;
   &:hover {
     cursor: pointer;
+    border-color: $color-on-surface;
+  }
+  &:checked {
+    border-color: $color-primary;
+  }
+  &:checked+.icon {
+    color: $color-primary;
   }
   &:disabled {
-    cursor: default;
+    opacity: .38;
+    border: 1px solid $color-on-surface;
+  }
+  &:disabled+.icon {
+    color: $color-on-surface;
+    opacity: .38;
   }
 }
