@@ -11,12 +11,13 @@ export class PuCheckbox {
   @Prop() hasError: boolean = false;
 
   render() {
+    console.log(this.hasError);
+    console.log('hello world');
+
     return (
       <Host>
         <slot>
-          <div>
-            <input disabled={this.disabled} class={{ 'pu-checkbox': true, 'error': this.hasError }} type="checkbox" />
-          </div>
+          <input disabled={this.disabled} class={`pu-checkbox ${this.hasError ? 'error' : ''}`} type="checkbox" />
         </slot>
       </Host>
     );
