@@ -1,16 +1,56 @@
 :host {
     --chip-height: 32px;
     --chip-shape: 8px;
-    
+    --icon-btn-size: 18px;
+    --icon-btn-margin-left: 8px;
+    --icon-btn-margin-right: 8px;
+    display: inline-flex;
+}
+
+@mixin chip-hover($color, $shadow-value: 2){
+    &:hover{
+        box-shadow: box-shadow($shadow-value);
+        color: $color;
+    }
+}
+
+@mixin chip-focus($outline, $color, $shadow-value:1){
+    &:focus{
+        border: $outline-width solid $outline;
+        color: $color;
+    }
 }
 
 .pu-chip {
-    display: inline-block;
     height: var(--chip-height);
-    // background: $color-primary;
     border-radius: var(--chip-shape);
     border: $outline-width solid $color-outline;
-    box-shadow: box-shadow(1);
+    box-shadow: box-shadow(0);
+    padding-right: 16px;
     font-family: $typeface-plain;
+    display: flex;
+    align-items: center;
     @include label-text-large;
+
+    @include chip-hover($color-on-surface, 2);
+
+    @include chip-focus($color-on-surface, 0);
+
+    .disabled {
+        background: rgba($color: $color-on-surface, $alpha: 0.12);
+        box-shadow: box-shadow(0);
+        color: rgba($color: $color-on-surface, $alpha: 0.38);
+    }
+
 }
+
+.pu-chip--elevated {
+    background: $color-surface-container-low;
+    box-shadow: box-shadow(0);
+
+    @include chip-hover($color-on-surface, 2);
+
+    @include chip-focus($color-on-surface, 1);
+}
+
+
