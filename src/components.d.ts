@@ -19,6 +19,7 @@ export namespace Components {
         "hasError": boolean;
     }
     interface PuFab {
+        "disabled": boolean;
         "type": 'small' | 'large';
     }
     interface PuIcon {
@@ -122,6 +123,7 @@ declare namespace LocalJSX {
         "hasError"?: boolean;
     }
     interface PuFab {
+        "disabled"?: boolean;
         "type"?: 'small' | 'large';
     }
     interface PuIcon {
