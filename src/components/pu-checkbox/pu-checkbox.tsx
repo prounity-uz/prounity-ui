@@ -10,7 +10,7 @@ export class PuCheckbox {
   @State() private showPuIcon: boolean = false;
   @Prop() checked: boolean;
   @Prop() disabled: boolean = false;
-  @Prop() hasError: boolean = true;
+  @Prop() hasError: boolean = false;
 
   @Watch('checked')
   handleCheckedChange() {
@@ -19,12 +19,6 @@ export class PuCheckbox {
 
   connectedCallback() {
     this.handleInputClick = this.handleInputClick.bind(this);
-  }
-
-  componentDidLoad() {
-    if (this.checkboxInput) {
-      this.checkboxInput.addEventListener('change', this.handleCheckedChange);
-    }
   }
 
   private handleInputClick() {
