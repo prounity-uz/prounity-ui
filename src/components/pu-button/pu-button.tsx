@@ -14,7 +14,9 @@ export class PuButton {
   render() {
     return (
       <button class={`pu-button pu-button--${this.type}`} disabled={this.disabled}>
+        <slot name="start"></slot>
         <slot></slot>
+        <slot name="end"></slot>
       </button>
     );
   }

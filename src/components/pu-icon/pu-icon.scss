@@ -1,4 +1,6 @@
 :host {
+  font-size: var(--icon-btn-size);
+  line-height: var(--icon-line-height);
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
@@ -10,5 +12,7 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+  margin-left: var(--icon-btn-margin-left);
+  margin-right: var(--icon-btn-margin-right);
 }
 
