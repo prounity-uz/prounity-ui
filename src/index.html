@@ -14,57 +14,98 @@
       body {
         padding: 10%;
       }
+
+      .demo-card {
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e5e5f7;
+        opacity: 0.8;
+        background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+        background-size: 10px 10px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        padding: 16px;
+      }
+      .demo-card > * {
+        margin: 4px;
+      }
+      .demo-card-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 16px;
+      }
+      .demo-card-header h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+      }
     </style>
   </head>
   <body>
-    <h2>Icon buttons</h2>
-    <pu-icon-buttons>
-      favorite
-    </pu-icon-buttons>
-    <pu-icon-buttons disabled>
-      favorite
-    </pu-icon-buttons>
-    <h2>Button</h2>
-    <div>
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <h2>Icon buttons</h2>
+      </div>
+      <pu-icon-buttons>
+        favorite
+      </pu-icon-buttons>
+      <pu-icon-buttons disabled>
+        favorite
+      </pu-icon-buttons>
+    </div>
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <h2>Button</h2>
+      </div>
       <pu-button>
         <pu-icon slot="start">
           favorite
         </pu-icon>
         Elevated
       </pu-button>
-      <pu-button>Elevated</pu-button>
       <pu-button type="filled">Filled</pu-button>
       <pu-button type="filled-tonal">Tonal</pu-button>
       <pu-button type="outlined">Outlined</pu-button>
       <pu-button type="text">Text</pu-button>
-      <!-- <hr> -->
-      <pu-button disabled>Elevated</pu-button>
+      <!-- <pu-button disabled>Elevated</pu-button>
       <pu-button disabled type="filled">Filled</pu-button>
       <pu-button disabled type="filled-tonal">Tonal</pu-button>
       <pu-button disabled type="outlined">Outlined</pu-button>
-      <pu-button disabled type="text">Text</pu-button>
+      <pu-button disabled type="text">Text</pu-button> -->
     </div>
 
-    <h2>Typography</h2>
-    <pu-text type="display-text-large">Display text large</pu-text>
-    <pu-text type="display-text">Display text</pu-text>
-    <pu-text type="display-text-small">Display text small</pu-text>
-    <hr>
-    <pu-text type="headline-text-large">Headline text large</pu-text>
-    <pu-text type="headline-text">Headline text</pu-text>
-    <pu-text type="headline-text-small">Headline text small</pu-text>
-    <hr>
-    <pu-text type="title-text-large">Title text large</pu-text>
-    <pu-text type="title-text">Title text</pu-text>
-    <pu-text type="title-text-small">Title text small</pu-text>
-    <hr>
-    <pu-text type="body-text-large">Body text large</pu-text>
-    <pu-text type="body-text">Body text</pu-text>
-    <pu-text type="body-text-small">Body text small</pu-text>
-    <hr>
-    <pu-text type="label-text-large">Label text large</pu-text>
-    <pu-text type="label-text">Label text</pu-text>
-    <pu-text type="label-text-small">Label text small</pu-text>
+    <div class="demo-card" style="flex-direction: column;">
+      <!-- <div class="demo-card-header">
+        <h2>Typography</h2>
+      </div> -->
+      <pu-text type="display-text-large">Display text large</pu-text>
+      <pu-text type="display-text">Display text</pu-text>
+      <pu-text type="display-text-small">Display text small</pu-text>
+      <hr>
+      <pu-text type="headline-text-large">Headline text large</pu-text>
+      <pu-text type="headline-text">Headline text</pu-text>
+      <pu-text type="headline-text-small">Headline text small</pu-text>
+      <hr>
+      <pu-text type="title-text-large">Title text large</pu-text>
+      <pu-text type="title-text">Title text</pu-text>
+      <pu-text type="title-text-small">Title text small</pu-text>
+      <hr>
+      <pu-text type="body-text-large">Body text large</pu-text>
+      <pu-text type="body-text">Body text</pu-text>
+      <pu-text type="body-text-small">Body text small</pu-text>
+      <hr>
+      <pu-text type="label-text-large">Label text large</pu-text>
+      <pu-text type="label-text">Label text</pu-text>
+      <pu-text type="label-text-small">Label text small</pu-text>
+    </div>
 
     <h2>Button</h2>
     <pu-button>Elevated</pu-button>
