@@ -13,6 +13,13 @@ export namespace Components {
     interface PuCard {
         "type": 'filled' | 'outlined' | 'elevated';
     }
+    interface PuIcon {
+    }
+    interface PuIconButtons {
+        "disabled": boolean;
+        "tooltip": string;
+        "type": 'standart' | 'contained';
+    }
     interface PuText {
         "type": 'display-text' | 'display-text-large' | 'display-text-small' |
     'headline-text' | 'headline-text-large' | 'headline-text-small' |
@@ -34,6 +41,18 @@ declare global {
         prototype: HTMLPuCardElement;
         new (): HTMLPuCardElement;
     };
+    interface HTMLPuIconElement extends Components.PuIcon, HTMLStencilElement {
+    }
+    var HTMLPuIconElement: {
+        prototype: HTMLPuIconElement;
+        new (): HTMLPuIconElement;
+    };
+    interface HTMLPuIconButtonsElement extends Components.PuIconButtons, HTMLStencilElement {
+    }
+    var HTMLPuIconButtonsElement: {
+        prototype: HTMLPuIconButtonsElement;
+        new (): HTMLPuIconButtonsElement;
+    };
     interface HTMLPuTextElement extends Components.PuText, HTMLStencilElement {
     }
     var HTMLPuTextElement: {
@@ -43,6 +62,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "pu-button": HTMLPuButtonElement;
         "pu-card": HTMLPuCardElement;
+        "pu-icon": HTMLPuIconElement;
+        "pu-icon-buttons": HTMLPuIconButtonsElement;
         "pu-text": HTMLPuTextElement;
     }
 }
@@ -54,6 +75,13 @@ declare namespace LocalJSX {
     interface PuCard {
         "type"?: 'filled' | 'outlined' | 'elevated';
     }
+    interface PuIcon {
+    }
+    interface PuIconButtons {
+        "disabled"?: boolean;
+        "tooltip"?: string;
+        "type"?: 'standart' | 'contained';
+    }
     interface PuText {
         "type"?: 'display-text' | 'display-text-large' | 'display-text-small' |
     'headline-text' | 'headline-text-large' | 'headline-text-small' |
@@ -64,6 +92,8 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "pu-button": PuButton;
         "pu-card": PuCard;
+        "pu-icon": PuIcon;
+        "pu-icon-buttons": PuIconButtons;
         "pu-text": PuText;
     }
 }
@@ -73,6 +103,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
             "pu-card": LocalJSX.PuCard & JSXBase.HTMLAttributes<HTMLPuCardElement>;
+            "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
+            "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;
             "pu-text": LocalJSX.PuText & JSXBase.HTMLAttributes<HTMLPuTextElement>;
         }
     }
