@@ -14,9 +14,23 @@
 
   &.error {
     accent-color: $color-error;
-  }
-}
+    outline-color: $color-error;
 
-.error {
-  outline-color: $color-error;
+    &:hover {
+      accent-color: $color-error;
+    }
+  }
+
+  &:hover {
+    accent-color: rgba($color: $color-primary, $alpha: 0.08);
+    border-color: $color-on-surface;
+    color: $color-primary;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    outline-color: rgba($color: $color-on-surface, $alpha: 0.38);
+    accent-color: rgba($color: $color-on-surface, $alpha: 0.38);
+    cursor: not-allowed;
+  }
 }
