@@ -7,15 +7,15 @@ import { Component, Host, Prop, h } from '@stencil/core';
 })
 export class PuCheckbox {
   @Prop() checked: boolean;
-  @Prop() disabled: boolean;
-  @Prop() hasError: boolean;
+  @Prop() disabled: boolean = false;
+  @Prop() hasError: boolean = false;
 
   render() {
     return (
       <Host>
         <slot>
           <div>
-            <input class={{ 'pu-checkbox': true, 'error': this.hasError }} type="checkbox" />
+            <input disabled={this.disabled} class={{ 'pu-checkbox': true, 'error': this.hasError }} type="checkbox" />
           </div>
         </slot>
       </Host>
