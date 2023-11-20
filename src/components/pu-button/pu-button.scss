@@ -65,6 +65,10 @@
   }
 }
 
+.pu-button-inner {
+  display: flex;
+}
+
 .pu-button--elevated {
   color: $color-primary;
   background: $color-surface-container-low;

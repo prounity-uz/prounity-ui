@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Element, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'pu-button',
@@ -11,12 +11,17 @@ export class PuButton {
 
   @Prop() disabled: boolean;
 
+  @Element() el: HTMLElement;
+
   render() {
     return (
       <button class={`pu-button pu-button--${this.type}`} disabled={this.disabled}>
-        <slot name="start"></slot>
-        <slot></slot>
-        <slot name="end"></slot>
+        <span class="pu-button-inner">
+          <slot name="start"></slot>
+          <slot></slot>
+          <slot name="end"></slot>
+        </span>
+        <pu-ripple-effect></pu-ripple-effect>
       </button>
     );
   }
