@@ -1,0 +1,16 @@
+:host {
+    --chip-height: 32px;
+    --chip-shape: 8px;
+    
+}
+
+.pu-chip {
+    display: inline-block;
+    height: var(--chip-height);
+    // background: $color-primary;
+    border-radius: var(--chip-shape);
+    border: $outline-width solid $color-outline;
+    box-shadow: box-shadow(1);
+    font-family: $typeface-plain;
+    @include label-text-large;
+}
