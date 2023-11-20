@@ -23,6 +23,9 @@ export namespace Components {
         "tooltip": string;
         "type": 'standart' | 'contained';
     }
+    interface PuRadioButton {
+        "disabled": boolean;
+    }
     interface PuText {
         "type": 'display-text' | 'display-text-large' | 'display-text-small' |
     'headline-text' | 'headline-text-large' | 'headline-text-small' |
@@ -62,6 +65,12 @@ declare global {
         prototype: HTMLPuIconButtonsElement;
         new (): HTMLPuIconButtonsElement;
     };
+    interface HTMLPuRadioButtonElement extends Components.PuRadioButton, HTMLStencilElement {
+    }
+    var HTMLPuRadioButtonElement: {
+        prototype: HTMLPuRadioButtonElement;
+        new (): HTMLPuRadioButtonElement;
+    };
     interface HTMLPuTextElement extends Components.PuText, HTMLStencilElement {
     }
     var HTMLPuTextElement: {
@@ -74,6 +83,7 @@ declare global {
         "pu-fab": HTMLPuFabElement;
         "pu-icon": HTMLPuIconElement;
         "pu-icon-buttons": HTMLPuIconButtonsElement;
+        "pu-radio-button": HTMLPuRadioButtonElement;
         "pu-text": HTMLPuTextElement;
     }
 }
@@ -95,6 +105,9 @@ declare namespace LocalJSX {
         "tooltip"?: string;
         "type"?: 'standart' | 'contained';
     }
+    interface PuRadioButton {
+        "disabled"?: boolean;
+    }
     interface PuText {
         "type"?: 'display-text' | 'display-text-large' | 'display-text-small' |
     'headline-text' | 'headline-text-large' | 'headline-text-small' |
@@ -108,6 +121,7 @@ declare namespace LocalJSX {
         "pu-fab": PuFab;
         "pu-icon": PuIcon;
         "pu-icon-buttons": PuIconButtons;
+        "pu-radio-button": PuRadioButton;
         "pu-text": PuText;
     }
 }
@@ -120,6 +134,7 @@ declare module "@stencil/core" {
             "pu-fab": LocalJSX.PuFab & JSXBase.HTMLAttributes<HTMLPuFabElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;
+            "pu-radio-button": LocalJSX.PuRadioButton & JSXBase.HTMLAttributes<HTMLPuRadioButtonElement>;
             "pu-text": LocalJSX.PuText & JSXBase.HTMLAttributes<HTMLPuTextElement>;
         }
     }

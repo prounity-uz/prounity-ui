@@ -1,0 +1,26 @@
+:host {
+  --width: 18px;
+  --height: 18px;
+  --state-layer-width: 40px;
+  --state-layer-height: 40px;
+}
+// .state-layer {
+//   width: var(--state-layer-width);
+//   height: var(--state-layer-height);
+//   border-radius: 50%;
+//   background-color: $color-primary;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+.radio-button {
+  width: var(--width);
+  height: var(--height);
+  accent-color: $color-primary;
+  border: 2px solid red;
+  cursor: pointer;
+  margin: 0;
+  &:disabled {
+    background-color: red;
+  }
+}
