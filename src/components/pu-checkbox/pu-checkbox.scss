@@ -1,0 +1,22 @@
+:host {
+  --checkbox-shape: 2px;
+  --checkbox-height: 18px;
+  --checkbox-width: 18px;
+}
+
+.pu-checkbox {
+  height: var(--checkbox-height);
+  width: var(--checkbox-width);
+  border-radius: var(--checkbox-shape);
+  accent-color: $color-primary;
+  outline-width: 2px;
+  cursor: pointer;
+
+  &.error {
+    accent-color: $color-error;
+  }
+}
+
+.error {
+  outline-color: $color-error;
+}
