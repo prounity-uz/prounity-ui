@@ -1,0 +1,26 @@
+:host {
+  --btn-shape: 20px;
+  --btn-height: 40px;
+}
+
+@mixin fab-hover($background-color, $shadow-value: 0) {
+  &:hover {
+    box-shadow: box-shadow($shadow-value);
+    background: rgba($color: $background-color, $alpha: 0.08);
+  }
+}
+
+@mixin fab-active($background-color, $shadow-value: 0) {
+  &:active {
+    box-shadow: box-shadow($shadow-value);
+    background: rgba($color: $background-color, $alpha: 0.1);
+  }
+}
+
+@mixin fab-disabled() {
+  &:disabled {
+    background: rgba($color: $color-on-surface, $alpha: 0.12);
+    box-shadow: box-shadow(0);
+    color: rgba($color: $color-on-surface, $alpha: 0.38);
+  }
+}
