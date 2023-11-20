@@ -11,6 +11,7 @@ export namespace Components {
         "type": 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
     }
     interface PuCard {
+        "disabled": boolean;
         "type": 'filled' | 'outlined' | 'elevated';
     }
     interface PuCheckbox {
@@ -115,6 +116,7 @@ declare namespace LocalJSX {
         "type"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
     }
     interface PuCard {
+        "disabled"?: boolean;
         "type"?: 'filled' | 'outlined' | 'elevated';
     }
     interface PuCheckbox {
