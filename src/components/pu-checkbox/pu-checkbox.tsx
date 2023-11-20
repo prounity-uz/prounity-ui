@@ -7,14 +7,14 @@ import { Component, Host, Prop, h, State, Watch, Element } from '@stencil/core';
 })
 export class PuCheckbox {
   @State() private checkboxInput: HTMLInputElement;
-  @State() private showPuIcon: boolean = false; // Новое состояние для отображения/скрытия pu-icon
+  @State() private showPuIcon: boolean = false;
   @Prop() checked: boolean;
   @Prop() disabled: boolean = false;
   @Prop() hasError: boolean = true;
 
   @Watch('checked')
   handleCheckedChange() {
-    this.showPuIcon = this.checked; // Обновлено состояние showPuIcon при изменении checked
+    this.showPuIcon = this.checked;
   }
 
   connectedCallback() {
