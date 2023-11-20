@@ -6,9 +6,10 @@
   width: var(--width);
   height: var(--height);
   accent-color: $color-primary;
-  border-radius: var(--border-radius);
   &:hover {
     cursor: pointer;
   }
-  
+  &:disabled {
+    cursor: default;
+  }
 }
