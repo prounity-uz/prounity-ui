@@ -1,12 +1,15 @@
 :host {
-  --btn-shape: 20px;
-  --btn-height: 40px;
+  --btn-shape: 16px;
+}
+@mixin fab($size, $shadow-value: 0) {
+    width: $size;
+    height: $size;
+    box-shadow: box-shadow($shadow-value);
 }
 
-@mixin fab-hover($background-color, $shadow-value: 0) {
+@mixin fab-hover($shadow-value: 0) {
   &:hover {
     box-shadow: box-shadow($shadow-value);
-    background: rgba($color: $background-color, $alpha: 0.08);
   }
 }
 
@@ -23,4 +26,34 @@
     box-shadow: box-shadow(0);
     color: rgba($color: $color-on-surface, $alpha: 0.38);
   }
+}
+
+.pu-fab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: var(--btn-shape);
+  background: $primary90;
+  @include fab(56px, 3);
+  &:hover {
+    @include fab-hover(4)
+  }
+}
+
+.pu-fab--small {
+  color: $color-primary;
+  @include fab(40px, 3)
+}
+
+.pu-fab--large {
+  color: $color-primary;
+  @include fab(96px, 3);
+  font-size: 36px;
 }

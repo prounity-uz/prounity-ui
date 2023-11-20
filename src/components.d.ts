@@ -14,6 +14,7 @@ export namespace Components {
         "type": 'filled' | 'outlined' | 'elevated';
     }
     interface PuFab {
+        "disabled": boolean;
         "type": 'small' | 'large';
     }
     interface PuIcon {
@@ -86,6 +87,7 @@ declare namespace LocalJSX {
         "type"?: 'filled' | 'outlined' | 'elevated';
     }
     interface PuFab {
+        "disabled"?: boolean;
         "type"?: 'small' | 'large';
     }
     interface PuIcon {
