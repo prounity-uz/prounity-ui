@@ -35,13 +35,22 @@
     @include chip-hover($color-on-surface, 2);
 
     @include chip-focus($color-on-surface, 0);
+}
 
-    .disabled {
-        background: rgba($color: $color-on-surface, $alpha: 0.12);
-        box-shadow: box-shadow(0);
-        color: rgba($color: $color-on-surface, $alpha: 0.38);
-    }
+.pu-chip--filter {
+    height: var(--chip-height);
+    border-radius: var(--chip-shape);
+    border: $outline-width solid $color-outline;
+    box-shadow: box-shadow(0);
+    padding-right: 0;
+    font-family: $typeface-plain;
+    display: flex;
+    align-items: center;
+    @include label-text-large;
 
+    @include chip-hover($color-on-surface, 2);
+
+    @include chip-focus($color-on-surface, 0);
 }
 
 .pu-chip--elevated {
@@ -53,4 +62,8 @@
     @include chip-focus($color-on-surface, 1);
 }
 
-
+.disabled {
+    background: rgba($color: $color-on-surface, $alpha: 0.12);
+    box-shadow: box-shadow(0);
+    color: rgba($color: $color-on-surface, $alpha: 0.38);
+}

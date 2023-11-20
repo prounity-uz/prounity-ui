@@ -18,6 +18,10 @@ export namespace Components {
         "disabled": boolean;
         "hasError": boolean;
     }
+    interface PuChip {
+        "disabled": boolean;
+        "type": 'elevated';
+    }
     interface PuFab {
         "disabled": boolean;
         "type": 'small' | 'large';
@@ -61,6 +65,12 @@ declare global {
         prototype: HTMLPuCheckboxElement;
         new (): HTMLPuCheckboxElement;
     };
+    interface HTMLPuChipElement extends Components.PuChip, HTMLStencilElement {
+    }
+    var HTMLPuChipElement: {
+        prototype: HTMLPuChipElement;
+        new (): HTMLPuChipElement;
+    };
     interface HTMLPuFabElement extends Components.PuFab, HTMLStencilElement {
     }
     var HTMLPuFabElement: {
@@ -101,6 +111,7 @@ declare global {
         "pu-button": HTMLPuButtonElement;
         "pu-card": HTMLPuCardElement;
         "pu-checkbox": HTMLPuCheckboxElement;
+        "pu-chip": HTMLPuChipElement;
         "pu-fab": HTMLPuFabElement;
         "pu-icon": HTMLPuIconElement;
         "pu-icon-buttons": HTMLPuIconButtonsElement;
@@ -121,6 +132,10 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "disabled"?: boolean;
         "hasError"?: boolean;
+    }
+    interface PuChip {
+        "disabled"?: boolean;
+        "type"?: 'elevated';
     }
     interface PuFab {
         "disabled"?: boolean;
@@ -149,6 +164,7 @@ declare namespace LocalJSX {
         "pu-button": PuButton;
         "pu-card": PuCard;
         "pu-checkbox": PuCheckbox;
+        "pu-chip": PuChip;
         "pu-fab": PuFab;
         "pu-icon": PuIcon;
         "pu-icon-buttons": PuIconButtons;
@@ -164,6 +180,7 @@ declare module "@stencil/core" {
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
             "pu-card": LocalJSX.PuCard & JSXBase.HTMLAttributes<HTMLPuCardElement>;
             "pu-checkbox": LocalJSX.PuCheckbox & JSXBase.HTMLAttributes<HTMLPuCheckboxElement>;
+            "pu-chip": LocalJSX.PuChip & JSXBase.HTMLAttributes<HTMLPuChipElement>;
             "pu-fab": LocalJSX.PuFab & JSXBase.HTMLAttributes<HTMLPuFabElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;

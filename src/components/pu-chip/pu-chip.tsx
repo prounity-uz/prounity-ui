@@ -9,7 +9,7 @@ export class PuChip {
 
   @Prop() type: 'elevated';
   
-  @Prop() disabled: boolean = true;
+  @Prop() disabled: boolean = false;
 
   render() {
     return (
