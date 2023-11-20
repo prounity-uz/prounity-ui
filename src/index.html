@@ -6,7 +6,7 @@
     <title>Stencil Component Starter</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Roboto&display=swap" rel="stylesheet" />
     <script type="module" src="/build/pu-ui.esm.js"></script>
     <script nomodule src="/build/pu-ui.js"></script>
 
@@ -50,25 +50,22 @@
     </style>
   </head>
   <body>
+    <h2>checkbox</h2>
+    <pu-checkbox></pu-checkbox>
+
     <div class="demo-card">
       <div class="demo-card-header">
         <h2>Icon buttons</h2>
       </div>
-      <pu-icon-buttons>
-        favorite
-      </pu-icon-buttons>
-      <pu-icon-buttons disabled>
-        favorite
-      </pu-icon-buttons>
+      <pu-icon-buttons> favorite </pu-icon-buttons>
+      <pu-icon-buttons disabled> favorite </pu-icon-buttons>
     </div>
     <div class="demo-card">
       <div class="demo-card-header">
         <h2>Button</h2>
       </div>
       <pu-button>
-        <pu-icon slot="start">
-          favorite
-        </pu-icon>
+        <pu-icon slot="start"> favorite </pu-icon>
         Elevated
       </pu-button>
       <pu-button type="filled">Filled</pu-button>
@@ -82,26 +79,26 @@
       <pu-button disabled type="text">Text</pu-button> -->
     </div>
 
-    <div class="demo-card" style="flex-direction: column;">
+    <div class="demo-card" style="flex-direction: column">
       <!-- <div class="demo-card-header">
         <h2>Typography</h2>
       </div> -->
       <pu-text type="display-text-large">Display text large</pu-text>
       <pu-text type="display-text">Display text</pu-text>
       <pu-text type="display-text-small">Display text small</pu-text>
-      <hr>
+      <hr />
       <pu-text type="headline-text-large">Headline text large</pu-text>
       <pu-text type="headline-text">Headline text</pu-text>
       <pu-text type="headline-text-small">Headline text small</pu-text>
-      <hr>
+      <hr />
       <pu-text type="title-text-large">Title text large</pu-text>
       <pu-text type="title-text">Title text</pu-text>
       <pu-text type="title-text-small">Title text small</pu-text>
-      <hr>
+      <hr />
       <pu-text type="body-text-large">Body text large</pu-text>
       <pu-text type="body-text">Body text</pu-text>
       <pu-text type="body-text-small">Body text small</pu-text>
-      <hr>
+      <hr />
       <pu-text type="label-text-large">Label text large</pu-text>
       <pu-text type="label-text">Label text</pu-text>
       <pu-text type="label-text-small">Label text small</pu-text>
@@ -113,7 +110,7 @@
     <pu-button type="filled-tonal">Tonal</pu-button>
     <pu-button type="outlined">Outlined</pu-button>
     <pu-button type="text">Text</pu-button>
-    <hr>
+    <hr />
     <pu-button disabled>Elevated</pu-button>
     <pu-button disabled type="filled">Filled</pu-button>
     <pu-button disabled type="filled-tonal">Tonal</pu-button>
@@ -122,6 +119,5 @@
 
     <h2>FAB</h2>
     <pu-fab>s</pu-fab>
-
   </body>
 </html>

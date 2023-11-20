@@ -13,6 +13,11 @@ export namespace Components {
     interface PuCard {
         "type": 'filled' | 'outlined' | 'elevated';
     }
+    interface PuCheckbox {
+        "checked": boolean;
+        "disabled": boolean;
+        "hasError": boolean;
+    }
     interface PuFab {
         "type": 'small' | 'large';
     }
@@ -44,6 +49,12 @@ declare global {
         prototype: HTMLPuCardElement;
         new (): HTMLPuCardElement;
     };
+    interface HTMLPuCheckboxElement extends Components.PuCheckbox, HTMLStencilElement {
+    }
+    var HTMLPuCheckboxElement: {
+        prototype: HTMLPuCheckboxElement;
+        new (): HTMLPuCheckboxElement;
+    };
     interface HTMLPuFabElement extends Components.PuFab, HTMLStencilElement {
     }
     var HTMLPuFabElement: {
@@ -71,6 +82,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "pu-button": HTMLPuButtonElement;
         "pu-card": HTMLPuCardElement;
+        "pu-checkbox": HTMLPuCheckboxElement;
         "pu-fab": HTMLPuFabElement;
         "pu-icon": HTMLPuIconElement;
         "pu-icon-buttons": HTMLPuIconButtonsElement;
@@ -84,6 +96,11 @@ declare namespace LocalJSX {
     }
     interface PuCard {
         "type"?: 'filled' | 'outlined' | 'elevated';
+    }
+    interface PuCheckbox {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "hasError"?: boolean;
     }
     interface PuFab {
         "type"?: 'small' | 'large';
@@ -105,6 +122,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "pu-button": PuButton;
         "pu-card": PuCard;
+        "pu-checkbox": PuCheckbox;
         "pu-fab": PuFab;
         "pu-icon": PuIcon;
         "pu-icon-buttons": PuIconButtons;
@@ -117,6 +135,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
             "pu-card": LocalJSX.PuCard & JSXBase.HTMLAttributes<HTMLPuCardElement>;
+            "pu-checkbox": LocalJSX.PuCheckbox & JSXBase.HTMLAttributes<HTMLPuCheckboxElement>;
             "pu-fab": LocalJSX.PuFab & JSXBase.HTMLAttributes<HTMLPuFabElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;
