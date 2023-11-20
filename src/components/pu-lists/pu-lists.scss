@@ -1,0 +1,21 @@
+// pu-lists.scss
+:host {
+  --list-shape: 0;
+  --list-height: 56px;
+  --leading-space: 16px;
+
+  .pu-list {
+    list-style: none;
+    padding: 0;
+
+    ::slotted(li) {
+      background-color: $color-surface;
+      border-radius: var(--list-shape);
+      width: 200px;
+      height: var(--list-height);
+      box-shadow: box-shadow(0);
+      color: $color-on-surface;
+      @include label-text-large;
+    }
+  }
+}
