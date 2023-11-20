@@ -5,26 +5,33 @@
 }
 
 .pu-checkbox {
+  position: relative;
   height: var(--checkbox-height);
   width: var(--checkbox-width);
   border-radius: var(--checkbox-shape);
-  accent-color: $color-primary;
-  outline-width: 2px;
+  background-color: $color-primary;
+  color: white;
+  border: 2px solid $color-on-surface-variant;
   cursor: pointer;
 
+  &.checked {
+    border: 0;
+  }
+
   &.error {
-    accent-color: $color-error;
+    background-color: $color-error;
     outline-color: $color-error;
+    color: $color-on-error;
 
     &:hover {
-      accent-color: $color-error;
+      background-color: $color-error;
     }
   }
 
   &:hover {
-    accent-color: rgba($color: $color-primary, $alpha: 0.08);
+    background-color: $color-primary;
     border-color: $color-on-surface;
-    color: $color-primary;
+    color: $color-on-primary;
     cursor: pointer;
   }
 
@@ -33,4 +40,12 @@
     accent-color: rgba($color: $color-on-surface, $alpha: 0.38);
     cursor: not-allowed;
   }
+}
+
+.pu-checkbox-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
