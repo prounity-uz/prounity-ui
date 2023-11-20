@@ -10,9 +10,9 @@ export class PuRadioButton {
   render() {
     return (
       <Host>
-        <slot>
-          <input class="radio-button" disabled={this.disabled} type={'radio'} />
-        </slot>
+        <pu-icon>check</pu-icon>
+        <input class="radio-button" disabled={this.disabled} type={'radio'} />
+        <pu-ripple-effect></pu-ripple-effect>
       </Host>
     );
   }
