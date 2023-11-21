@@ -1,4 +1,7 @@
 :host {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   --checkbox-shape: 2px;
   --checkbox-height: 18px;
   --checkbox-width: 18px;
@@ -84,4 +87,8 @@
   &:disabled {
     cursor: not-allowed;
   }
+}
+
+.label {
+  @include label-text-large;
 }

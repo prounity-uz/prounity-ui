@@ -8,7 +8,7 @@ import { Component, Host, Prop, h, State, Watch } from '@stencil/core';
 export class PuCheckbox {
   @State() private puIcon: string | null = null;
   @Prop() disabled: boolean = false;
-  @Prop() hasError: boolean = true;
+  @Prop() hasError: boolean = false;
 
   connectedCallback() {
     this.handleInputClick = this.handleInputClick.bind(this);
@@ -31,14 +31,18 @@ export class PuCheckbox {
   }
 
   render() {
+    console.log(this.hasError);
+
     return (
       <Host>
-        <div class={'ripple'}>
-          <div class={`pu-checkbox ${this.hasError ? 'error' : ''} ${this.disabled ? 'disabled' : ''}`}>
-            {this.puIcon !== null && <pu-icon style={{ display: this.puIcon === 'check' || this.puIcon === 'horizontal_rule' ? 'block' : 'none' }}>{this.puIcon}</pu-icon>}
-            <input disabled={this.disabled} class={`pu-checkbox-input`} type="checkbox" onClick={this.handleInputClick} />
-          </div>
+        <div class={`pu-checkbox ${this.hasError ? 'error' : ''} ${this.disabled ? 'disabled' : ''}`}>
+          {this.puIcon !== null && <pu-icon style={{ display: this.puIcon === 'check' || this.puIcon === 'horizontal_rule' ? 'block' : 'none' }}>{this.puIcon}</pu-icon>}
+          <input disabled={this.disabled} class={`pu-checkbox-input`} type="checkbox" onClick={this.handleInputClick} />
         </div>
+        <span class="label">
+          {' '}
+          <slot name="label"></slot>
+        </span>
       </Host>
     );
   }
