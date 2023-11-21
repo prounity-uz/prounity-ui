@@ -1,3 +1,25 @@
 :host {
   display: block;
 }
+:host(.pu-card) {
+  min-height: 120px;
+  width: 250px;
+  border-radius: $shape-corner-medium;
+}
+:host(.pu-card--elevated) {
+  background: $color-surface-container-low;
+  box-shadow: box-shadow(1);
+}
+:host(.pu-card--filled) {
+  background: $color-surface-container-highest;
+}
+:host(.pu-card--outlined) {
+  background: color-surface;
+  color: $color-primary;
+  border: $outline-width solid $color-outline;
+}
+:host(.pu-card.disabled) {
+  opacity: 0.38;
+  color: $neutral-variant90;
+  cursor: not-allowed;
+}

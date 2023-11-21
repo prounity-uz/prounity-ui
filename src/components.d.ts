@@ -11,6 +11,7 @@ export namespace Components {
         "type": 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
     }
     interface PuCard {
+        "disabled": boolean;
         "type": 'filled' | 'outlined' | 'elevated';
     }
     interface PuCheckbox {
@@ -32,6 +33,8 @@ export namespace Components {
         "disabled": boolean;
         "tooltip": string;
         "type": 'standart' | 'contained';
+    }
+    interface PuLists {
     }
     interface PuRadioButton {
         "disabled": boolean;
@@ -89,6 +92,12 @@ declare global {
         prototype: HTMLPuIconButtonsElement;
         new (): HTMLPuIconButtonsElement;
     };
+    interface HTMLPuListsElement extends Components.PuLists, HTMLStencilElement {
+    }
+    var HTMLPuListsElement: {
+        prototype: HTMLPuListsElement;
+        new (): HTMLPuListsElement;
+    };
     interface HTMLPuRadioButtonElement extends Components.PuRadioButton, HTMLStencilElement {
     }
     var HTMLPuRadioButtonElement: {
@@ -115,6 +124,7 @@ declare global {
         "pu-fab": HTMLPuFabElement;
         "pu-icon": HTMLPuIconElement;
         "pu-icon-buttons": HTMLPuIconButtonsElement;
+        "pu-lists": HTMLPuListsElement;
         "pu-radio-button": HTMLPuRadioButtonElement;
         "pu-ripple-effect": HTMLPuRippleEffectElement;
         "pu-text": HTMLPuTextElement;
@@ -126,6 +136,7 @@ declare namespace LocalJSX {
         "type"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
     }
     interface PuCard {
+        "disabled"?: boolean;
         "type"?: 'filled' | 'outlined' | 'elevated';
     }
     interface PuCheckbox {
@@ -148,6 +159,8 @@ declare namespace LocalJSX {
         "tooltip"?: string;
         "type"?: 'standart' | 'contained';
     }
+    interface PuLists {
+    }
     interface PuRadioButton {
         "disabled"?: boolean;
     }
@@ -168,6 +181,7 @@ declare namespace LocalJSX {
         "pu-fab": PuFab;
         "pu-icon": PuIcon;
         "pu-icon-buttons": PuIconButtons;
+        "pu-lists": PuLists;
         "pu-radio-button": PuRadioButton;
         "pu-ripple-effect": PuRippleEffect;
         "pu-text": PuText;
@@ -184,6 +198,7 @@ declare module "@stencil/core" {
             "pu-fab": LocalJSX.PuFab & JSXBase.HTMLAttributes<HTMLPuFabElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;
+            "pu-lists": LocalJSX.PuLists & JSXBase.HTMLAttributes<HTMLPuListsElement>;
             "pu-radio-button": LocalJSX.PuRadioButton & JSXBase.HTMLAttributes<HTMLPuRadioButtonElement>;
             "pu-ripple-effect": LocalJSX.PuRippleEffect & JSXBase.HTMLAttributes<HTMLPuRippleEffectElement>;
             "pu-text": LocalJSX.PuText & JSXBase.HTMLAttributes<HTMLPuTextElement>;
