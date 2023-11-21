@@ -10,8 +10,12 @@ export class PuRadioButton {
   render() {
     return (
       <Host>
-        <input class="radio-button" disabled={this.disabled} type={'radio'} />
-        <pu-icon class="icon">fiber_manual_record</pu-icon>
+        <div class="radio-button-box">
+          <input class="radio-input" disabled={this.disabled} type={'radio'} />
+          <pu-icon class="icon checked-icon">radio_button_checked</pu-icon>
+          <pu-icon class="icon unchecked-icon">radio_button_unchecked</pu-icon>
+        </div>
+        <slot name="label"></slot>
       </Host>
     );
   }
