@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Oswald&amp;family=Roboto&amp;display=swap" rel="stylesheet" />
+    <script type="module" src="../www/build/pu-ui.esm.js" data-stencil></script>
+    <script nomodule="" src="../www/build/pu-ui.js" data-stencil></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/html.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="pu-preview">
+      <div class="pu-preview-header">
+        <img src="../logo.png" alt="" />
+        <h1>Radio Button</h1>
+        <a href="https://m3.material.io/styles/typography/overview" target="_blank">See design guideline</a>
+        <p>Radio buttons let people select one option from a set of options</p>
+      </div>
+      <div class="pu-preview-container">
+        <div class="pu-preview-card">
+          <pu-radio-button></pu-radio-button>
+          <pre>
+            <code class="language-html">
+&lt;script src="pu-ui.min.js">&lt;/script>
+
+&lt;pu-radio-button>&lt;/pu-radio-button>
+            </code>
+          </pre>
+          <pu-radio-button checked disabled></pu-radio-button>
+          <pre>
+            <code class="language-html">
+&lt;script src="pu-ui.min.js">&lt;/script>
+
+&lt;pu-radio-button checked disabled >&lt;/pu-radio-button>
+            </code>
+          </pre>
+          <pu-radio-button><span slot="label">Radio label</span></pu-radio-button>
+          <pre>
+            <code class="language-html">
+&lt;script src="pu-ui.min.js">&lt;/script>
+
+&lt;pu-radio-button>&lt;span slot="label">Radio label&lt;/span>&lt;/pu-radio-button>
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
