@@ -23,9 +23,11 @@ export namespace Components {
         "type": 'assist' | 'filter' | 'input' | 'suggestion';
     }
     interface PuFab {
+        "addItems": object;
         "color": 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
         "disabled": boolean;
-        "type": 'small' | 'large' | 'elevated' | 'text';
+        "icon": string;
+        "type": 'small' | 'large' | 'elevated' | 'add' | 'text';
     }
     interface PuIcon {
         "type": 'filled' | 'outlined';
@@ -150,9 +152,11 @@ declare namespace LocalJSX {
         "type"?: 'assist' | 'filter' | 'input' | 'suggestion';
     }
     interface PuFab {
+        "addItems"?: object;
         "color"?: 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
         "disabled"?: boolean;
-        "type"?: 'small' | 'large' | 'elevated' | 'text';
+        "icon"?: string;
+        "type"?: 'small' | 'large' | 'elevated' | 'add' | 'text';
     }
     interface PuIcon {
         "type"?: 'filled' | 'outlined';

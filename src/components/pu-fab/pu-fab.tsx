@@ -1,4 +1,4 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, h, Listen, Prop } from '@stencil/core';
 
 @Component({
   tag: 'pu-fab',
@@ -6,22 +6,36 @@ import { Component, Element, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PuFab {
+  @Prop() icon: string;
 
-  @Prop() type: 'small' | 'large' | 'elevated' | 'text' = 'elevated';
+  @Prop() type: 'small' | 'large' | 'elevated' | 'add' | 'text' = 'elevated';
 
   @Prop() disabled: boolean = false;
   
   @Prop() color: 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text' = 'color';
 
-  @Element() el: HTMLElement;
+  @Prop() addItems: object
 
   render() {
     return (
-      <button class={`pu-fab pu-fab--${this.type} pu-${this.color}`} disabled={this.disabled}>
-        <pu-icon>
-          <slot></slot>
-        </pu-icon>
-      </button>
+      <div style={{display: "flex", flexDirection: 'column', justifyContent: 'center', alignItems: 'center',}}>
+        <button class={`${this.type == 'add' ? 'pu-fab pu-fab--list-item' : 'pu-fab-item-none'}`}>
+          <pu-icon>
+            {this.icon}
+          </pu-icon>
+        </button>
+        <button class={`${this.type == 'add' ? 'pu-fab pu-fab--list-item' : 'pu-fab-item-none'}`}>
+          <pu-icon>
+            {this.icon}
+          </pu-icon>
+        </button>
+        <button class={`pu-fab pu-fab--${this.type} pu-${this.color}`} disabled={this.disabled}>
+          <pu-icon>
+            {this.icon}
+          </pu-icon>
+            <slot></slot>
+        </button>
+      </div>
     );
   }
 
