@@ -73,16 +73,8 @@
 }
 
 .pu-chip--input {
-    height: var(--chip-height);
-    border-radius: var(--chip-shape);
-    background: $color-surface-container-low;
-    box-shadow: box-shadow(1);
     padding-left: 16px;
     padding-right: 0;
-    margin: 0;
-    font-family: $typeface-plain;
-    display: flex;
-    align-items: center;
     @include label-text-large;
     
     @include chip-hover($color-on-surface, 2);
@@ -92,6 +84,14 @@
     @include chip-dragged(4, $color-on-surface);
 }
 
-.pu-chip-suggestion {
-    
+.pu-chip--suggestion {
+  padding-left: 16px;
+  padding-right: 16px;
+  @include label-text-large;
+  
+  @include chip-hover($color-on-surface, 2);
+  
+  @include chip-focus($color-on-surface, 0);
+  
+  @include chip-dragged(4, $color-on-surface);
 }
