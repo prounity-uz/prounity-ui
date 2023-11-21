@@ -12,9 +12,14 @@ export class PuChip {
   @Prop() disabled: boolean = false;
 
   render() {
+    const toggleWithOutline = () => {
+      const chip = document.querySelector('pu-chip');
+      chip.classList.toggle('select');
+      
+    }
     return (
       <Host>
-        <div class={`pu-chip pu-chip--${this.type} ${this.disabled ? "disabled": ""}`}>
+        <div onClick={toggleWithOutline} class={`pu-chip pu-chip--${this.type} ${this.disabled ? "disabled": ""}`}>
         <slot name="start"></slot>
         <slot></slot>
         <slot name="end"></slot>
