@@ -14,7 +14,6 @@
 @mixin button-hover($background-color, $shadow-value: 0) {
   &:hover {
     box-shadow: box-shadow($shadow-value);
-    // background: rgba($color: $background-color, $alpha: 0.08);
   }
 
   &:hover::after {

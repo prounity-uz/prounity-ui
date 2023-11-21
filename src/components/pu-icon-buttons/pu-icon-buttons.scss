@@ -7,6 +7,8 @@
 }
 
 .pu-icon-button {
+  position: relative;
+  overflow: hidden;
   border: 0;
   width: var(--icon-btn-width);
   height: var(--icon-btn-height);
@@ -22,8 +24,23 @@
     cursor: pointer;
   }
 
+  &:active {
+    background-color: rgba($color: $color-primary, $alpha: 0.1);
+    color: $color-on-primary;
+  }
+
   &:disabled {
     background-color: rgba($color: $color-on-surface, $alpha: 0.12);
     color: rgba($color: $color-on-surface, $alpha: 0.38);
+  }
+}
+
+.pu-icon-button--active {
+  background-color: $color-surface-container-highest;
+  color: $color-primary;
+
+  &:active {
+    background-color: rgba($color: $color-primary, $alpha: 0.1);
+    color: $color-primary;
   }
 }

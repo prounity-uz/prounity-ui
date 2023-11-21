@@ -28,6 +28,7 @@ export namespace Components {
         "type": 'small' | 'large' | 'elevated' | 'text';
     }
     interface PuIcon {
+        "type": 'filled' | 'outlined';
     }
     interface PuIconButtons {
         "disabled": boolean;
@@ -153,6 +154,7 @@ declare namespace LocalJSX {
         "type"?: 'small' | 'large' | 'elevated' | 'text';
     }
     interface PuIcon {
+        "type"?: 'filled' | 'outlined';
     }
     interface PuIconButtons {
         "disabled"?: boolean;
