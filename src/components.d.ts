@@ -20,7 +20,7 @@ export namespace Components {
     }
     interface PuChip {
         "disabled": boolean;
-        "type": 'elevated';
+        "type": 'assist' | 'filter' | 'input' | 'suggestion';
     }
     interface PuFab {
         "color": 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
@@ -147,7 +147,7 @@ declare namespace LocalJSX {
     }
     interface PuChip {
         "disabled"?: boolean;
-        "type"?: 'elevated';
+        "type"?: 'assist' | 'filter' | 'input' | 'suggestion';
     }
     interface PuFab {
         "color"?: 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
