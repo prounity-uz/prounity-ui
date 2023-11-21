@@ -11,6 +11,7 @@
     &:hover{
         box-shadow: box-shadow($shadow-value);
         color: $color;
+        transition: all 0.2s ease-in-out;
     }
 }
 
@@ -30,12 +31,16 @@
     font-family: $typeface-plain;
     display: flex;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+
     @include label-text-large;
 
     @include chip-hover($color-on-surface, 2);
 
     @include chip-focus($color-on-surface, 0);
 }
+
+
 
 .pu-chip--filter {
     height: var(--chip-height);
