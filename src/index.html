@@ -95,8 +95,16 @@
       <div class="demo-card-header">
         <h2>Radio Button</h2>
       </div>
-      <pu-radio-button disabled></pu-radio-button>
-      <pu-radio-button></pu-radio-button>
+      <pu-radio-button checked><span slot="label"></span></pu-radio-button>
+      <pu-radio-button><span slot="label"></span></pu-radio-button>
+      <pu-radio-button disabled><span slot="label"></span></pu-radio-button>
+      <pu-radio-button checked disabled><span slot="label"></span></pu-radio-button>
+      <pu-radio-button>
+        <span slot="label">Radio button</span>
+      </pu-radio-button>
+      <pu-radio-button checked>
+        <span slot="label">Radio button</span>
+      </pu-radio-button>
     </div>
     <div class="demo-card">
       <div class="demo-card-header">

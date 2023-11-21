@@ -38,6 +38,7 @@ export namespace Components {
     interface PuLists {
     }
     interface PuRadioButton {
+        "checked": boolean;
         "disabled": boolean;
     }
     interface PuRippleEffect {
@@ -164,6 +165,7 @@ declare namespace LocalJSX {
     interface PuLists {
     }
     interface PuRadioButton {
+        "checked"?: boolean;
         "disabled"?: boolean;
     }
     interface PuRippleEffect {

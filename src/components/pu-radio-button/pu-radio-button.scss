@@ -1,47 +1,64 @@
 :host {
-  --icon-size: 30px;
+  --icon-size: 20px;
+  --state-layer-width: 40px;
+  --state-layer-height: 40px;
+}
+.radio-button {
   display: flex;
   align-items: center;
-}
-.icon {
-  position: absolute;
-  font-size: var(--icon-size);
   cursor: pointer;
-}
-.icon.unchecked-icon {
-  color: $color-on-surface-variant;
-}
-.icon.checked-icon {
-  display: none;
-  color: $color-primary;
-  z-index: 9;
-}
-.radio-button-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.radio-input {
-  width: var(--icon-size);
-  height: var(--icon-size);
-  margin: 0;
-  z-index: 99;
-  opacity: 0;
-  cursor: pointer;
-  &:hover {
-    ~.unchecked-icon {
-      color: $color-on-surface;
+  .icon {
+    position: absolute;
+    font-size: var(--icon-size);
+    &.unchecked-icon {
+      color: $color-on-surface-variant;
+    }
+    &.checked-icon {
+      display: none;
+      color: $color-primary;
+      z-index: 9;
     }
   }
-  &:checked+.icon.checked-icon {
-    display: block;
+  .radio-button-box {
+    position: relative;
+    width: var(--state-layer-width);
+    height: var(--state-layer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    .radio-input {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      opacity: 0;
+      z-index: 99;
+      cursor: pointer;
+      &:checked+.icon.checked-icon {
+        display: block;
+      }
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
   }
-  &:disabled {
-    ~.icon {
+  &:hover {
+    .radio-button-box {
+      background-color: rgba($color: $color-primary, $alpha: 0.2);
+    }
+  }
+  &.disabled {
+    cursor: not-allowed;
+    .icon {
       color: $color-on-surface;
       opacity: .38;
-      pointer-events: none;
+    }
+    .radio-button-box {
+      background-color: rgba($color: $color-primary, $alpha: 0);
     }
   }
+}
+.radio-label {
+  @include label-text-large;
+  color: $color-on-surface;
+  margin-left: 5px;
 }
