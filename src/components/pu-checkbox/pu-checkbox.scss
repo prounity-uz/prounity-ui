@@ -38,7 +38,14 @@
     color: $color-on-error;
 
     &:hover {
+      border-color: $color-error;
       background-color: $color-error;
+      &:not(:has(pu-icon)) {
+        background-color: transparent;
+      }
+    }
+    &:not(:has(pu-icon)) {
+      background-color: transparent;
     }
   }
 
