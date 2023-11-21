@@ -52,9 +52,15 @@
     }
   }
 
+  &.disabled {
+    border: 2px solid rgba($color: $color-on-surface, $alpha: 0.38);
+    background-color: rgba($color: $color-on-surface, $alpha: 0.38);
+    cursor: not-allowed;
+  }
+
   &:disabled {
     border: 10px solid rgba($color: $color-on-surface, $alpha: 0.38);
-    accent-color: rgba($color: $color-on-surface, $alpha: 0.38);
+    background-color: rgba($color: $color-on-surface, $alpha: 0.38);
     cursor: not-allowed;
   }
 }
@@ -67,4 +73,8 @@
   top: -3px;
   left: -4px;
   opacity: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
