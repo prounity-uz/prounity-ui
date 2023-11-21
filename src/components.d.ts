@@ -24,8 +24,9 @@ export namespace Components {
         "type": 'elevated';
     }
     interface PuFab {
+        "color": 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
         "disabled": boolean;
-        "type": 'small' | 'large';
+        "type": 'small' | 'large' | 'elevated' | 'text';
     }
     interface PuIcon {
     }
@@ -149,8 +150,9 @@ declare namespace LocalJSX {
         "type"?: 'elevated';
     }
     interface PuFab {
+        "color"?: 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
         "disabled"?: boolean;
-        "type"?: 'small' | 'large';
+        "type"?: 'small' | 'large' | 'elevated' | 'text';
     }
     interface PuIcon {
     }
