@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Material Symbols';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v151/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsLjBuVY.woff2) format('woff2');
+}
+
+body,
+html {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pu-preview {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.pu-preview-header {
+  min-height: 420px;
+  padding: 52px;
+  box-sizing: border-box;
+  background-color: #E6E0E9;
+  border-bottom: 1px solid #e5e5f7;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.pu-preview-header h1 {
+  font-size: 80px;
+  margin: auto 0 24px;
+  color: #000;
+  font-weight: 400;
+}
+
+.pu-preview-header a {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0 24px;
+  display: block;
+}
+
+.pu-preview-header p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.pu-preview-container {
+  padding: 70px;
+}
+
+.pu-preview-card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e5e5f7;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.demo-card {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+.demo-card > * {
+  margin: 4px;
+}
+.demo-card-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 16px;
+}
+.demo-card-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}

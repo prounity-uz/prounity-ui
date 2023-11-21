@@ -18,10 +18,7 @@
         font-weight: 100 700;
         src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v151/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsLjBuVY.woff2) format('woff2');
       }
-
-      body {
-        padding: 10%;
-      }
+      
       .demo-card {
         min-height: 250px;
         display: flex;
@@ -59,6 +56,14 @@
   <body>
     <div class="demo-card">
       <div class="demo-card-header">
+        <h2>Icon buttons</h2>
+      </div>
+      <pu-icon-buttons type="outlined"> favorite </pu-icon-buttons>
+      <pu-icon-buttons disabled> favorite </pu-icon-buttons>
+    </div>
+    
+    <!-- <div class="demo-card">
+      <div class="demo-card-header">
         <h2>Lists</h2>
       </div>
       <pu-lists>
@@ -80,8 +85,6 @@
         <h2>Chip</h2>
       </div>
       <pu-chip>chip</pu-chip>
-      <!-- <pu-checkbox hasError="{true}"></pu-checkbox>
-      <pu-checkbox disabled></pu-checkbox> -->
     </div>
     <div class="demo-card">
       <div class="demo-card-header">
@@ -133,17 +136,9 @@
       <pu-button type="filled-tonal">Tonal</pu-button>
       <pu-button type="outlined">Outlined</pu-button>
       <pu-button type="text">Text</pu-button>
-      <!-- <pu-button disabled>Elevated</pu-button>
-      <pu-button disabled type="filled">Filled</pu-button>
-      <pu-button disabled type="filled-tonal">Tonal</pu-button>
-      <pu-button disabled type="outlined">Outlined</pu-button>
-      <pu-button disabled type="text">Text</pu-button> -->
     </div>
 
     <div class="demo-card" style="flex-direction: column">
-      <!-- <div class="demo-card-header">
-        <h2>Typography</h2>
-      </div> -->
       <pu-text type="display-text-large">Display text large</pu-text>
       <pu-text type="display-text">Display text</pu-text>
       <pu-text type="display-text-small">Display text small</pu-text>
@@ -203,6 +198,6 @@
       <pu-icon slot="end">
         close
       </pu-icon>
-    </pu-chip>
+    </pu-chip> -->
   </body>
 </html>
