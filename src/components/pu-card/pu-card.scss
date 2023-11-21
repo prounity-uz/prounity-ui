@@ -1,24 +1,33 @@
 :host {
   display: block;
+  --card-padding: 16px;
+  --min-weight: 120px;
+  --min-height: 60px
 }
-:host(.pu-card) {
-  min-height: 120px;
-  width: 250px;
+.pu-card {
+  position: relative;
+  overflow: hidden;
   border-radius: $shape-corner-medium;
+  padding: 16px;
+  cursor: pointer;
+  .card-title {
+    font-size: 20px;
+    @include display-text-small
+  }
 }
-:host(.pu-card--elevated) {
+.pu-card--elevated {
   background: $color-surface-container-low;
   box-shadow: box-shadow(1);
 }
-:host(.pu-card--filled) {
+.pu-card--filled {
   background: $color-surface-container-highest;
 }
-:host(.pu-card--outlined) {
+.pu-card--outlined {
   background: color-surface;
   color: $color-primary;
   border: $outline-width solid $color-outline;
 }
-:host(.pu-card.disabled) {
+.pu-card.disabled {
   opacity: 0.38;
   color: $neutral-variant90;
   cursor: not-allowed;
