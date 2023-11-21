@@ -8,7 +8,7 @@
     list-style: none;
     padding: 0;
 
-    ::slotted(li) {
+    li {
       background-color: $color-surface;
       border-radius: var(--list-shape);
       width: 200px;
@@ -16,6 +16,9 @@
       box-shadow: box-shadow(0);
       color: $color-on-surface;
       @include label-text-large;
+    }
+    .tracking {
+      color: red !important;
     }
   }
 }

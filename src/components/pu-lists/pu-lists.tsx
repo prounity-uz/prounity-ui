@@ -10,7 +10,12 @@ export class PuLists {
     return (
       <Host>
         <ul class={'pu-list'}>
-          <slot></slot>
+          <li>
+            <slot></slot>
+            <div class={'tracking'}>
+              <slot name="tracking"></slot>
+            </div>
+          </li>
         </ul>
       </Host>
     );

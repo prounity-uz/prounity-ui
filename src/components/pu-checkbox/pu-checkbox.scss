@@ -10,6 +10,7 @@
   width: var(--checkbox-width);
   border-radius: var(--checkbox-shape);
   background-color: $color-primary;
+  text-align: center;
   color: white;
   border: 2px solid $color-on-surface-variant;
   cursor: pointer;
@@ -45,7 +46,9 @@
 .pu-checkbox-input {
   cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+  top: -3px;
+  left: -4px;
   opacity: 0;
 }
