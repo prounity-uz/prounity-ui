@@ -17,6 +17,9 @@
       color: $color-on-surface;
       @include label-text-large;
     }
+    slot {
+      flex: 1;
+    }
     .tracking {
       color: red !important;
     }

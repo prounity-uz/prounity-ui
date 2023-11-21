@@ -15,7 +15,6 @@ export namespace Components {
         "type": 'filled' | 'outlined' | 'elevated';
     }
     interface PuCheckbox {
-        "checked": boolean;
         "disabled": boolean;
         "hasError": boolean;
     }
@@ -141,7 +140,6 @@ declare namespace LocalJSX {
         "type"?: 'filled' | 'outlined' | 'elevated';
     }
     interface PuCheckbox {
-        "checked"?: boolean;
         "disabled"?: boolean;
         "hasError"?: boolean;
     }
