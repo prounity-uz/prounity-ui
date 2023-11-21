@@ -33,7 +33,7 @@ export class PuCheckbox {
   render() {
     return (
       <Host>
-        <div class={`pu-checkbox ${this.hasError ? 'error' : ''}`}>
+        <div class={`pu-checkbox ${this.hasError ? 'error' : ''} ${this.disabled ? 'disabled' : ''}`}>
           {this.puIcon !== null && <pu-icon style={{ display: this.puIcon === 'check' || this.puIcon === 'horizontal_rule' ? 'block' : 'none' }}>{this.puIcon}</pu-icon>}
           <input disabled={this.disabled} class={`pu-checkbox-input`} type="checkbox" onClick={this.handleInputClick} />
         </div>
