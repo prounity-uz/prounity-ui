@@ -12,10 +12,11 @@
   background-color: $color-primary;
   text-align: center;
   color: white;
+
   cursor: pointer;
 
   &:not(:has(pu-icon)) {
-    border: 2px solid $color-on-surface-variant;
+    border: 1px solid $color-on-surface-variant;
   }
 
   pu-icon {
