@@ -18,7 +18,7 @@ export class PuRadioButton {
             <pu-icon class="icon unchecked-icon">radio_button_unchecked</pu-icon>
           </div>
           <span class="radio-label">
-            <slot name="label"></slot>
+            <slot ></slot>
           </span>
         </div>
       </Host>

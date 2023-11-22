@@ -17,36 +17,25 @@
     <div class="pu-preview">
       <div class="pu-preview-header">
         <img src="../logo.png" alt="" />
-        <h1>Radio Button</h1>
+        <h1>Card</h1>
         <a href="https://m3.material.io/styles/typography/overview" target="_blank">See design guideline</a>
-        <p>Radio buttons let people select one option from a set of options</p>
+        <p>Use typography to present your design and content as clearly and efficiently as possible.</p>
       </div>
       <div class="pu-preview-container">
         <div class="pu-preview-card">
-          <pu-radio-button></pu-radio-button>
+          <pu-card style="width: 18rem">
+            <pu-text slot="title" type="headline-text">Title</pu-text>
+            <pu-text slot="subtitle" type="title-text-small">Subtitle</pu-text>
+          </pu-card>
           <pre>
             <code class="language-html">
 &lt;script src="pu-ui.min.js">&lt;/script>
 
-&lt;pu-radio-button>&lt;/pu-radio-button>
+&lt;pu-text type="display-large"> Display Large &lt;/pu-text>
             </code>
           </pre>
-          <pu-radio-button checked disabled></pu-radio-button>
-          <pre>
-            <code class="language-html">
-&lt;script src="pu-ui.min.js">&lt;/script>
-
-&lt;pu-radio-button checked disabled >&lt;/pu-radio-button>
-            </code>
-          </pre>
-          <pu-radio-button>Option</pu-radio-button>
-          <pre>
-            <code class="language-html">
-&lt;script src="pu-ui.min.js">&lt;/script>
-
-&lt;pu-radio-button>&lt;span slot="label">Radio label&lt;/span>&lt;/pu-radio-button>
-            </code>
-          </pre>
+          <pu-text type="display-text"> Display Medium - Roboto 45/52 . 0 </pu-text>
+          <pu-text type="display-text"> Display Small - Roboto 36/44 . 0 </pu-text>
         </div>
       </div>
     </div>

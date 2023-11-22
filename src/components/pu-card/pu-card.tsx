@@ -14,9 +14,7 @@ export class PuCard {
       <Host>
         <div class={`pu-card pu-card--${this.type} ${this.disabled && 'disabled'}`}>
           <div class="headline">
-            <span class="card-title">
-              <slot name="title"></slot>
-            </span>
+            <slot name="title"></slot>
             <slot name="subtitle"></slot>
           </div>
           <pu-ripple-effect></pu-ripple-effect>

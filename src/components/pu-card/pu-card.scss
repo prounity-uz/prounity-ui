@@ -10,10 +10,6 @@
   border-radius: $shape-corner-medium;
   padding: 16px;
   cursor: pointer;
-  .card-title {
-    font-size: 20px;
-    @include display-text-small
-  }
 }
 .pu-card--elevated {
   background: $color-surface-container-low;
