@@ -25,7 +25,6 @@ export namespace Components {
     interface PuDivider {
     }
     interface PuFab {
-        "addItems": object;
         "color": 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
         "disabled": boolean;
         "icon": string;
@@ -163,7 +162,6 @@ declare namespace LocalJSX {
     interface PuDivider {
     }
     interface PuFab {
-        "addItems"?: object;
         "color"?: 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
         "disabled"?: boolean;
         "icon"?: string;
