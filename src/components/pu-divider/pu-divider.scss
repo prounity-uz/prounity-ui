@@ -1,0 +1,10 @@
+:host {
+    --divider-height: 1px;
+    --divider-width: 100%;
+}
+
+.pu-divider {
+    height: var(--divider-height);
+    width: var(--divider-width);
+    background: $color-outline-variant;
+}
