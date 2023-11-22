@@ -31,8 +31,6 @@ export class PuCheckbox {
   }
 
   render() {
-    console.log(this.hasError);
-
     return (
       <Host>
         <div class={`pu-checkbox ${this.hasError ? 'error' : ''} ${this.disabled ? 'disabled' : ''}`}>

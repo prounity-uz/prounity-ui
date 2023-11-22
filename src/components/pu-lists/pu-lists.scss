@@ -12,7 +12,7 @@
       background-color: $color-surface;
       border-radius: var(--list-shape);
       width: 200px;
-      height: var(--list-height);
+      // height: var(--list-height);
       box-shadow: box-shadow(0);
       color: $color-on-surface;
       @include label-text-large;
@@ -20,6 +20,22 @@
     slot {
       flex: 1;
     }
+
+    .headline {
+      @include headline-text;
+    }
+
+    .support-text {
+      color: $color-on-surface-variant;
+      @include body-text;
+    }
+
+    .leading-icon {
+      font-size: 24px;
+      height: 56px;
+      width: 100px;
+    }
+
     .tracking {
       color: red !important;
     }
