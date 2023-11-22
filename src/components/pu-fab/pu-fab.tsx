@@ -16,7 +16,7 @@ export class PuFab {
 
   @State() fabOpen: boolean = true;
 
-  @State() fabListShow: boolean = true
+  @State() fabListShow: boolean = true;
 
   fabClick(type) {
     if(type=='add'){

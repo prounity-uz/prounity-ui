@@ -46,6 +46,9 @@ export namespace Components {
     }
     interface PuRippleEffect {
     }
+    interface PuSnack {
+        "title": string;
+    }
     interface PuText {
         "type": 'display-text' | 'display-text-large' | 'display-text-small' |
     'headline-text' | 'headline-text-large' | 'headline-text-small' |
@@ -121,6 +124,12 @@ declare global {
         prototype: HTMLPuRippleEffectElement;
         new (): HTMLPuRippleEffectElement;
     };
+    interface HTMLPuSnackElement extends Components.PuSnack, HTMLStencilElement {
+    }
+    var HTMLPuSnackElement: {
+        prototype: HTMLPuSnackElement;
+        new (): HTMLPuSnackElement;
+    };
     interface HTMLPuTextElement extends Components.PuText, HTMLStencilElement {
     }
     var HTMLPuTextElement: {
@@ -139,6 +148,7 @@ declare global {
         "pu-lists": HTMLPuListsElement;
         "pu-radio-button": HTMLPuRadioButtonElement;
         "pu-ripple-effect": HTMLPuRippleEffectElement;
+        "pu-snack": HTMLPuSnackElement;
         "pu-text": HTMLPuTextElement;
     }
 }
@@ -183,6 +193,9 @@ declare namespace LocalJSX {
     }
     interface PuRippleEffect {
     }
+    interface PuSnack {
+        "title"?: string;
+    }
     interface PuText {
         "type"?: 'display-text' | 'display-text-large' | 'display-text-small' |
     'headline-text' | 'headline-text-large' | 'headline-text-small' |
@@ -202,6 +215,7 @@ declare namespace LocalJSX {
         "pu-lists": PuLists;
         "pu-radio-button": PuRadioButton;
         "pu-ripple-effect": PuRippleEffect;
+        "pu-snack": PuSnack;
         "pu-text": PuText;
     }
 }
@@ -220,6 +234,7 @@ declare module "@stencil/core" {
             "pu-lists": LocalJSX.PuLists & JSXBase.HTMLAttributes<HTMLPuListsElement>;
             "pu-radio-button": LocalJSX.PuRadioButton & JSXBase.HTMLAttributes<HTMLPuRadioButtonElement>;
             "pu-ripple-effect": LocalJSX.PuRippleEffect & JSXBase.HTMLAttributes<HTMLPuRippleEffectElement>;
+            "pu-snack": LocalJSX.PuSnack & JSXBase.HTMLAttributes<HTMLPuSnackElement>;
             "pu-text": LocalJSX.PuText & JSXBase.HTMLAttributes<HTMLPuTextElement>;
         }
     }
