@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Element, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'pu-card',
@@ -8,11 +8,16 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class PuCard {
   @Prop() type: 'filled' | 'outlined' | 'elevated' = 'elevated';
   @Prop() disabled: boolean = false;
+  @Element() el!: HTMLImageElement;
 
   render() {
+    console.log(this.el);
     return (
       <Host>
         <div class={`pu-card pu-card--${this.type} ${this.disabled && 'disabled'}`}>
+          <div class="more-icon">
+            <slot name="icon"></slot>
+          </div>
           <div class="headline">
             <slot name="title"></slot>
             <slot name="subtitle"></slot>

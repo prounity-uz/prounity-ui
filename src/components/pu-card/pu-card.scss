@@ -10,6 +10,10 @@
   border-radius: $shape-corner-medium;
   padding: 16px;
   cursor: pointer;
+  .more-icon {
+    position: absolute;
+    right: 10px;
+  }
   &.disabled {
     opacity: 0.38;
     color: $color-on-surface;
