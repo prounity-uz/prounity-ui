@@ -11,18 +11,43 @@ export class PuLists {
       <Host>
         <ul class={'pu-list'}>
           <li>
-            <slot name="leading-icon">
-              <pu-icon class={'leading-icon'}></pu-icon>
-            </slot>
-            <h1 class={'headline'}>
-              <slot name="headline">Headline</slot>
-            </h1>
-            <div class={'tracking'}>
-              <slot name="tracking"></slot>
+            <div class={'list-item-div'}>
+              <div class={'list-content'}>
+                {/* <div class={'leading-avatar'}>
+                  <slot name="leading-avatar">
+                    <img src="" alt="" />
+                  </slot>
+                  <span class={'leading-avatar-label'}>
+                    <slot name="leading-avatar-label"></slot>
+                  </span>
+                </div> */}
+
+                {/* <div class={'leading-image'}>
+                  <slot name="leading-image">
+                    <img src="" alt="" />
+                  </slot>
+                </div> */}
+
+                <pu-icon class={'leading-icon'}>
+                  <slot name="leading-icon"></slot>
+                </pu-icon>
+                <div>
+                  <pu-text type="headline-text">
+                    <slot name="headline"></slot>
+                  </pu-text>
+                  <pu-text type="body-text-small" class={'support-text'}>
+                    <slot name="support-text"></slot>
+                  </pu-text>
+                </div>
+              </div>
+
+              <div class={'tracking'}>
+                <slot name="tracking"></slot>
+              </div>
             </div>
-            <span class={'support-text'}>
-              <slot name="support-text"></slot>
-            </span>
+            {/* <div class={'divider'}>
+              <slot name="divider"></slot>
+            </div> */}
           </li>
         </ul>
       </Host>
