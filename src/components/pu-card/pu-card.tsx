@@ -17,6 +17,9 @@ export class PuCard {
             <slot name="title"></slot>
             <slot name="subtitle"></slot>
           </div>
+          <div class="body">
+            <slot></slot>
+          </div>
           <pu-ripple-effect></pu-ripple-effect>
         </div>
       </Host>

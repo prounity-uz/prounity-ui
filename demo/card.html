@@ -23,9 +23,13 @@
       </div>
       <div class="pu-preview-container">
         <div class="pu-preview-card">
+          <pu-text type="display-text-small">Elevated Card</pu-text>
           <pu-card style="width: 18rem">
             <pu-text slot="title" type="headline-text">Title</pu-text>
             <pu-text slot="subtitle" type="title-text-small">Subtitle</pu-text>
+            <div class="card-body">
+              <pu-button style="float: right" type="filled">Get started</pu-button>
+            </div>
           </pu-card>
           <pre>
             <code class="language-html">
@@ -34,6 +38,72 @@
 &lt;pu-card style="width: 18rem">
    &lt;pu-text slot="title" type="headline-text">Title&lt;/pu-text>
    &lt;pu-text slot="subtitle" type="title-text-small">Subtitle&lt;/pu-text> 
+   &lt;div class="card-body">
+     &lt;pu-button style="float: right" type="filled">Get started&lt;/pu-button>
+   &lt;/div>
+&lt;/pu-card>
+            </code>
+          </pre>
+          <pu-text type="display-text-small">Filled Card</pu-text>
+          <pu-card type="filled" style="width: 18rem">
+            <pu-text slot="title" type="headline-text-large">Title</pu-text>
+            <pu-text slot="subtitle" type="title-text">Subtitle</pu-text>
+            <div>
+              <pu-button style="float: right" type="filled">Get started</pu-button>
+            </div>
+          </pu-card>
+          <pre>
+            <code class="language-html">
+&lt;script src="pu-ui.min.js">&lt;/script>
+
+&lt;pu-card type="filled" style="width: 18rem">
+   &lt;pu-text slot="title" type="headline-text">Title&lt;/pu-text>
+   &lt;pu-text slot="subtitle" type="title-text-small">Subtitle&lt;/pu-text> 
+   &lt;div class="card-body">
+     &lt;pu-button style="float: right" type="filled">Get started&lt;/pu-button>
+   &lt;/div>
+&lt;/pu-card>
+            </code>
+          </pre>
+          <pu-text type="display-text-small">Outlined Card</pu-text>
+          <pu-card type="outlined" style="width: 18rem">
+            <pu-text slot="title" type="headline-text">Title</pu-text>
+            <pu-text slot="subtitle" type="title-text-small">Subtitle</pu-text>
+            <div>
+              <pu-button style="float: right" type="filled">Get started</pu-button>
+            </div>
+          </pu-card>
+          <pre>
+            <code class="language-html">
+&lt;script src="pu-ui.min.js">&lt;/script>
+
+&lt;pu-card type="outlined" style="width: 18rem">
+   &lt;pu-text slot="title" type="headline-text">Title&lt;/pu-text>
+   &lt;pu-text slot="subtitle" type="title-text-small">Subtitle&lt;/pu-text> 
+   &lt;div class="card-body">
+     &lt;pu-button style="float: right" type="filled">Get started&lt;/pu-button>
+   &lt;/div>
+&lt;/pu-card>
+            </code>
+          </pre>
+          <pu-text type="display-text-small">Disabled Card</pu-text>
+          <pu-card disabled style="width: 18rem">
+            <pu-text slot="title" type="headline-text">Title</pu-text>
+            <pu-text slot="subtitle" type="title-text-small">Subtitle</pu-text>
+            <div class="card-body">
+              <pu-button style="float: right" type="filled">Get started</pu-button>
+            </div>
+          </pu-card>
+          <pre>
+            <code class="language-html">
+&lt;script src="pu-ui.min.js">&lt;/script>
+
+&lt;pu-card style="width: 18rem">
+   &lt;pu-text slot="title" type="headline-text">Title&lt;/pu-text>
+   &lt;pu-text slot="subtitle" type="title-text-small">Subtitle&lt;/pu-text> 
+   &lt;div class="card-body">
+     &lt;pu-button style="float: right" type="filled">Get started&lt;/pu-button>
+   &lt;/div>
 &lt;/pu-card>
             </code>
           </pre>

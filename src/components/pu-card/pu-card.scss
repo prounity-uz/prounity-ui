@@ -10,21 +10,37 @@
   border-radius: $shape-corner-medium;
   padding: 16px;
   cursor: pointer;
+  &.disabled {
+    opacity: 0.38;
+    color: $color-on-surface;
+    cursor: not-allowed;
+    box-shadow: box-shadow(0);
+  }
 }
 .pu-card--elevated {
   background: $color-surface-container-low;
   box-shadow: box-shadow(1);
+  &:hover {
+    box-shadow: box-shadow(2);
+  }
+  &.disabled {
+    box-shadow: box-shadow(1);
+  }
 }
 .pu-card--filled {
   background: $color-surface-container-highest;
+  &:hover {
+    box-shadow: box-shadow(1);
+  }
 }
 .pu-card--outlined {
   background: color-surface;
-  color: $color-primary;
   border: $outline-width solid $color-outline;
-}
-.pu-card.disabled {
-  opacity: 0.38;
-  color: $neutral-variant90;
-  cursor: not-allowed;
+  &:hover {
+    border: $outline-width solid $color-outline-variant;
+    box-shadow: box-shadow(1);
+  }
+  &:focus {
+    border: $outline-width solid $color-on-surface;
+  }
 }
