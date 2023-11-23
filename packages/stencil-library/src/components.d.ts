@@ -49,7 +49,7 @@ export namespace Components {
     interface PuRippleEffect {
     }
     interface PuSnack {
-        "snackTitle": string;
+        "titleMain": string;
     }
     interface PuText {
         "type": 'display-text' | 'display-text-large' | 'display-text-small' |
@@ -205,7 +205,7 @@ declare namespace LocalJSX {
     interface PuRippleEffect {
     }
     interface PuSnack {
-        "snackTitle"?: string;
+        "titleMain"?: string;
     }
     interface PuText {
         "type"?: 'display-text' | 'display-text-large' | 'display-text-small' |

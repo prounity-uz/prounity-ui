@@ -15,6 +15,11 @@
 
 ## Dependencies
 
+### Used by
+
+ - [pu-navigation-drawer](../pu-navigation-drawer)
+ - [pu-snack](../pu-snackbar)
+
 ### Depends on
 
 - [pu-ripple-effect](../pu-ripple-effect)
@@ -23,6 +28,8 @@
 ```mermaid
 graph TD;
   pu-button --> pu-ripple-effect
+  pu-navigation-drawer --> pu-button
+  pu-snack --> pu-button
   style pu-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

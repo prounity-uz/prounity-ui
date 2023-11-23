@@ -7,7 +7,7 @@ import { Component, Host, h, State, Prop } from '@stencil/core';
 })
 export class PuSnackbar {
 
-  @Prop() title: string;
+  @Prop() titleMain: string;
 
   @State() snackShow: boolean = false;
 
@@ -23,7 +23,7 @@ export class PuSnackbar {
     return (
       <Host>
         <pu-button type='text' onClick={() => this.toggleSnackbar()}>
-          {this.title}
+          {this.titleMain}
         </pu-button>
         <div
           class={{

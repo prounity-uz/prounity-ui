@@ -8,6 +8,7 @@ export const PuFab = createReactComponent('pu-fab');
 export const PuIcon = createReactComponent('pu-icon');
 export const PuIconButtons = createReactComponent('pu-icon-buttons');
 export const PuLists = createReactComponent('pu-lists');
+export const PuNavigationDrawer = createReactComponent('pu-navigation-drawer');
 export const PuRadioButton = createReactComponent('pu-radio-button');
 export const PuRippleEffect = createReactComponent('pu-ripple-effect');
 export const PuSnack = createReactComponent('pu-snack');

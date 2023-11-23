@@ -17,11 +17,13 @@
 ### Used by
 
  - [pu-lists](../pu-lists)
+ - [pu-snack](../pu-snackbar)
 
 ### Graph
 ```mermaid
 graph TD;
   pu-lists --> pu-text
+  pu-snack --> pu-text
   style pu-text fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

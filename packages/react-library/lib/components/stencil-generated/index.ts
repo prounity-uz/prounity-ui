@@ -16,6 +16,7 @@ export const PuFab = /*@__PURE__*/createReactComponent<JSX.PuFab, HTMLPuFabEleme
 export const PuIcon = /*@__PURE__*/createReactComponent<JSX.PuIcon, HTMLPuIconElement>('pu-icon');
 export const PuIconButtons = /*@__PURE__*/createReactComponent<JSX.PuIconButtons, HTMLPuIconButtonsElement>('pu-icon-buttons');
 export const PuLists = /*@__PURE__*/createReactComponent<JSX.PuLists, HTMLPuListsElement>('pu-lists');
+export const PuNavigationDrawer = /*@__PURE__*/createReactComponent<JSX.PuNavigationDrawer, HTMLPuNavigationDrawerElement>('pu-navigation-drawer');
 export const PuRadioButton = /*@__PURE__*/createReactComponent<JSX.PuRadioButton, HTMLPuRadioButtonElement>('pu-radio-button');
 export const PuRippleEffect = /*@__PURE__*/createReactComponent<JSX.PuRippleEffect, HTMLPuRippleEffectElement>('pu-ripple-effect');
 export const PuSnack = /*@__PURE__*/createReactComponent<JSX.PuSnack, HTMLPuSnackElement>('pu-snack');
