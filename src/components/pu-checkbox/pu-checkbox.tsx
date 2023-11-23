@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h, State, Watch } from '@stencil/core';
+import { Component, Host, Prop, h, State } from '@stencil/core';
 
 @Component({
   tag: 'pu-checkbox',
