@@ -7,14 +7,17 @@ import { Component, Host, h, State, Prop } from '@stencil/core';
 })
 export class PuSnackbar {
 
-  @Prop() title: string; 
+  @Prop() title: string;
 
   @State() snackShow: boolean = false;
 
+  snackTimeout() { setTimeout(() => this.snackShow = false, 4000) }
+
   toggleSnackbar() {
-    this.snackShow = !this.snackShow;
-    setTimeout(() => this.snackShow = !this.snackShow,
-    4000)
+    if (!this.snackShow) {
+      this.snackShow = true
+      this.snackTimeout();
+    }
   }
   render() {
     return (
@@ -22,16 +25,16 @@ export class PuSnackbar {
         <pu-button type='text' onClick={() => this.toggleSnackbar()}>
           {this.title}
         </pu-button>
-        <div 
-        class={{
-          'toast-box': true,
-          'toast-box--show': this.snackShow,
-          'toast-box--hide': !this.snackShow
+        <div
+          class={{
+            'toast-box': true,
+            'toast-box--show': this.snackShow,
+            'toast-box--hide': !this.snackShow
           }}>
           <pu-text>
             <slot></slot>
           </pu-text>
-          <pu-button type='text' onClick={() => this.toggleSnackbar()}>
+          <pu-button type='text' onClick={() => this.snackShow = false}>
             Close
           </pu-button>
         </div>
