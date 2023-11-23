@@ -40,6 +40,8 @@ export namespace Components {
     }
     interface PuLists {
     }
+    interface PuNavigationDrawer {
+    }
     interface PuRadioButton {
         "checked": boolean;
         "disabled": boolean;
@@ -112,6 +114,12 @@ declare global {
         prototype: HTMLPuListsElement;
         new (): HTMLPuListsElement;
     };
+    interface HTMLPuNavigationDrawerElement extends Components.PuNavigationDrawer, HTMLStencilElement {
+    }
+    var HTMLPuNavigationDrawerElement: {
+        prototype: HTMLPuNavigationDrawerElement;
+        new (): HTMLPuNavigationDrawerElement;
+    };
     interface HTMLPuRadioButtonElement extends Components.PuRadioButton, HTMLStencilElement {
     }
     var HTMLPuRadioButtonElement: {
@@ -146,6 +154,7 @@ declare global {
         "pu-icon": HTMLPuIconElement;
         "pu-icon-buttons": HTMLPuIconButtonsElement;
         "pu-lists": HTMLPuListsElement;
+        "pu-navigation-drawer": HTMLPuNavigationDrawerElement;
         "pu-radio-button": HTMLPuRadioButtonElement;
         "pu-ripple-effect": HTMLPuRippleEffectElement;
         "pu-snack": HTMLPuSnackElement;
@@ -187,6 +196,8 @@ declare namespace LocalJSX {
     }
     interface PuLists {
     }
+    interface PuNavigationDrawer {
+    }
     interface PuRadioButton {
         "checked"?: boolean;
         "disabled"?: boolean;
@@ -213,6 +224,7 @@ declare namespace LocalJSX {
         "pu-icon": PuIcon;
         "pu-icon-buttons": PuIconButtons;
         "pu-lists": PuLists;
+        "pu-navigation-drawer": PuNavigationDrawer;
         "pu-radio-button": PuRadioButton;
         "pu-ripple-effect": PuRippleEffect;
         "pu-snack": PuSnack;
@@ -232,6 +244,7 @@ declare module "@stencil/core" {
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;
             "pu-lists": LocalJSX.PuLists & JSXBase.HTMLAttributes<HTMLPuListsElement>;
+            "pu-navigation-drawer": LocalJSX.PuNavigationDrawer & JSXBase.HTMLAttributes<HTMLPuNavigationDrawerElement>;
             "pu-radio-button": LocalJSX.PuRadioButton & JSXBase.HTMLAttributes<HTMLPuRadioButtonElement>;
             "pu-ripple-effect": LocalJSX.PuRippleEffect & JSXBase.HTMLAttributes<HTMLPuRippleEffectElement>;
             "pu-snack": LocalJSX.PuSnack & JSXBase.HTMLAttributes<HTMLPuSnackElement>;
