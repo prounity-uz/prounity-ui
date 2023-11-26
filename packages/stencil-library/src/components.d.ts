@@ -24,6 +24,8 @@ export namespace Components {
         "disabled": boolean;
         "placeholder"?: string;
     }
+    interface PuNavigationBar {
+    }
 }
 declare global {
     interface HTMLPuBadgeElement extends Components.PuBadge, HTMLStencilElement {
@@ -50,11 +52,18 @@ declare global {
         prototype: HTMLPuInputElement;
         new (): HTMLPuInputElement;
     };
+    interface HTMLPuNavigationBarElement extends Components.PuNavigationBar, HTMLStencilElement {
+    }
+    var HTMLPuNavigationBarElement: {
+        prototype: HTMLPuNavigationBarElement;
+        new (): HTMLPuNavigationBarElement;
+    };
     interface HTMLElementTagNameMap {
         "pu-badge": HTMLPuBadgeElement;
         "pu-button": HTMLPuButtonElement;
         "pu-icon": HTMLPuIconElement;
         "pu-input": HTMLPuInputElement;
+        "pu-navigation-bar": HTMLPuNavigationBarElement;
     }
 }
 declare namespace LocalJSX {
@@ -74,11 +83,14 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "placeholder"?: string;
     }
+    interface PuNavigationBar {
+    }
     interface IntrinsicElements {
         "pu-badge": PuBadge;
         "pu-button": PuButton;
         "pu-icon": PuIcon;
         "pu-input": PuInput;
+        "pu-navigation-bar": PuNavigationBar;
     }
 }
 export { LocalJSX as JSX };
@@ -89,6 +101,7 @@ declare module "@stencil/core" {
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-input": LocalJSX.PuInput & JSXBase.HTMLAttributes<HTMLPuInputElement>;
+            "pu-navigation-bar": LocalJSX.PuNavigationBar & JSXBase.HTMLAttributes<HTMLPuNavigationBarElement>;
         }
     }
 }
