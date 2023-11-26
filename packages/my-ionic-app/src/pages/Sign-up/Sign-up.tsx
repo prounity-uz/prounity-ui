@@ -9,6 +9,7 @@ import {
 import registerImage from "../../assets/login-musix-logo.svg";
 import "./Sign-up.css";
 import { Link } from "react-router-dom";
+import { PuInput } from "pro-unity-ui";
 
 const SignUp: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const SignUp: React.FC = () => {
             <h1>Create your account</h1>
             <div className="input-box">
               <label className="input-label">Name</label>
+              <PuInput />
               <IonInput
                 placeholder="vikashini"
                 className="custom-input"

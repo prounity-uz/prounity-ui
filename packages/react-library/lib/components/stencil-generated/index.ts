@@ -11,3 +11,4 @@ export const PuBadge = /*@__PURE__*/createReactComponent<JSX.PuBadge, HTMLPuBadg
 export const PuButton = /*@__PURE__*/createReactComponent<JSX.PuButton, HTMLPuButtonElement>('pu-button');
 export const PuIcon = /*@__PURE__*/createReactComponent<JSX.PuIcon, HTMLPuIconElement>('pu-icon');
 export const PuInput = /*@__PURE__*/createReactComponent<JSX.PuInput, HTMLPuInputElement>('pu-input');
+export const PuNavigationBar = /*@__PURE__*/createReactComponent<JSX.PuNavigationBar, HTMLPuNavigationBarElement>('pu-navigation-bar');

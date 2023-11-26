@@ -71,7 +71,7 @@ const Home: React.FC = () => {
           <div className="recently-play">
             <IonRow className="recently-play-head">
               <IonCol>
-                <IonText color={"light"}>Recently Play</IonText>
+                <IonText>Recently Play</IonText>
               </IonCol>
               <IonCol size="auto">
                 <IonText color={"light"}>
