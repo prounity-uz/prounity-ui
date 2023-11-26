@@ -1,0 +1,29 @@
+:host {
+  --background-color: #{$md_sys_color_error};
+  --color: #{$md_sys_color_on_error};
+  --font-size: 11px;
+  --line-height: 16px;
+  --letter-spacing: 0.5px;
+
+  display: block;
+  background-color: var(--background-color);
+  color: var(--color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 16px;
+
+  letter-spacing: var(--letter-spacing);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+:host(.small) {
+  min-width: 6px;
+  min-height: 6px;
+}
+
+:host(.large) {
+  min-width: 16px;
+  min-height: 16px;
+}

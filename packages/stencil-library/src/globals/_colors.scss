@@ -1,60 +1,99 @@
-@use 'sass:math';
-@use 'sass:map';
- 
-$values: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A700);
- 
-@function createPalette($color) {
-  $white: #fff;
-  $black: #000;
-  $baseDark: multiply($color, $color);
- 
-  $palette: (
-    50 : mix($color, $white, 12%),
-    100 : mix($color, $white, 30%),
-    200 : mix($color, $white, 50%),
-    300 : mix($color, $white, 70%),
-    400 : mix($color, $white, 85%),
-    500 : mix($color, $white, 100%),
-    600 : mix($color, $baseDark, 87%),
-    700 : mix($color, $baseDark, 70%),
-    800 : mix($color, $baseDark, 54%),
-    900 : mix($color, $baseDark, 25%),
-    A100 : lighten(saturate(mix($black, $baseDark, 15%), 80%), 65%),
-    A200 : lighten(saturate(mix($black, $baseDark, 15%), 80%), 55%),
-    A400 : lighten(saturate(mix($black, $baseDark, 15%), 100%), 45%),
-    A700 : lighten(saturate(mix($black, $baseDark, 15%), 100%), 40%)
-  );
- 
-  $contrast: ();
-  @each $v in $values {
-    $contrast: map.merge($contrast, ($v: getContrast(map_get($palette, $v))))
-  }
- 
-  $palette: map.merge($palette, (contrast: $contrast));
- 
-  @return $palette;
-}
- 
- 
-@function multiply($rgb1, $rgb2) {
-  $r: math.floor(red($rgb1) * red($rgb2) / 255);
-  $g: math.floor(green($rgb1) * green($rgb2) / 255);
-  $b: math.floor(blue($rgb1) * blue($rgb2) / 255);
-  @return rgb($r, $g, $b);
-}
- 
-@function getBrightness($color) {
-  @return (red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000;
-}
- 
-@function isLight($color) {
-  @return getBrightness($color) >= 128;
-}
- 
-@function getContrast($color) {
-  @if isLight($color) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
+$md_ref_palette_primary0: #000000;
+$md_ref_palette_primary10: #21005d;
+$md_ref_palette_primary20: #381e72;
+$md_ref_palette_primary30: #4f378b;
+$md_ref_palette_primary40: #6750a4;
+$md_ref_palette_primary50: #7f67be;
+$md_ref_palette_primary60: #9a82db;
+$md_ref_palette_primary70: #b69df8;
+$md_ref_palette_primary80: #d0bcff;
+$md_ref_palette_primary90: #eaddff;
+$md_ref_palette_primary95: #f6edff;
+$md_ref_palette_primary99: #fffbfe;
+$md_ref_palette_primary100: #ffffff;
+$md_ref_palette_primary98: #f8f9ff;
+
+$md_ref_palette_secondary0: #000000;
+$md_ref_palette_secondary10: #1d192b;
+$md_ref_palette_secondary20: #332d41;
+$md_ref_palette_secondary30: #4a4458;
+$md_ref_palette_secondary40: #625b71;
+$md_ref_palette_secondary50: #7a7289;
+$md_ref_palette_secondary60: #958da5;
+$md_ref_palette_secondary70: #b0a7c0;
+$md_ref_palette_secondary80: #ccc2dc;
+$md_ref_palette_secondary90: #e8def8;
+$md_ref_palette_secondary95: #f6edff;
+$md_ref_palette_secondary99: #fffbfe;
+$md_ref_palette_secondary100: #ffffff;
+$md_ref_palette_secondary98: #f8f9ff;
+
+$md_ref_palette_tertiary0: #000000;
+$md_ref_palette_tertiary10: #31111d;
+$md_ref_palette_tertiary20: #492532;
+$md_ref_palette_tertiary30: #633b48;
+$md_ref_palette_tertiary40: #7d5260;
+$md_ref_palette_tertiary50: #986977;
+$md_ref_palette_tertiary60: #b58392;
+$md_ref_palette_tertiary70: #d29dac;
+$md_ref_palette_tertiary80: #efb8c8;
+$md_ref_palette_tertiary90: #ffd8e4;
+$md_ref_palette_tertiary95: #ffecf1;
+$md_ref_palette_tertiary99: #fffbfa;
+$md_ref_palette_tertiary100: #ffffff;
+$md_ref_palette_tertiary98: #fff7fd;
+
+$md_ref_palette_error0: #000000;
+$md_ref_palette_error10: #410e0b;
+$md_ref_palette_error20: #601410;
+$md_ref_palette_error30: #8c1d18;
+$md_ref_palette_error40: #b3261e;
+$md_ref_palette_error50: #dc362e;
+$md_ref_palette_error60: #e46962;
+$md_ref_palette_error70: #ec928e;
+$md_ref_palette_error80: #f2b8b5;
+$md_ref_palette_error90: #f9dedc;
+$md_ref_palette_error95: #fceeee;
+$md_ref_palette_error99: #fffbf9;
+$md_ref_palette_error100: #ffffff;
+$md_ref_palette_error98: #fff8f7;
+
+$md_ref_palette_neutral0: #000000;
+$md_ref_palette_neutral4: #0f0d13;
+$md_ref_palette_neutral6: #141218;
+$md_ref_palette_neutral10: #1d1b20;
+$md_ref_palette_neutral12: #211f26;
+$md_ref_palette_neutral17: #2b2930;
+$md_ref_palette_neutral20: #322f35;
+$md_ref_palette_neutral22: #36343b;
+$md_ref_palette_neutral24: #3b383e;
+$md_ref_palette_neutral30: #48464c;
+$md_ref_palette_neutral40: #605d64;
+$md_ref_palette_neutral50: #79767d;
+$md_ref_palette_neutral60: #938f96;
+$md_ref_palette_neutral70: #aea9b1;
+$md_ref_palette_neutral80: #cac5cd;
+$md_ref_palette_neutral87: #ded8e1;
+$md_ref_palette_neutral90: #e6e0e9;
+$md_ref_palette_neutral92: #ece6f0;
+$md_ref_palette_neutral94: #f3edf7;
+$md_ref_palette_neutral95: #f5eff7;
+$md_ref_palette_neutral96: #f7f2fa;
+$md_ref_palette_neutral99: #fffbff;
+$md_ref_palette_neutral100: #ffffff;
+$md_ref_palette_neutral98: #fef7ff;
+
+$md_ref_palette_neutral-variant0: #000000;
+$md_ref_palette_neutral-variant10: #1d1a22;
+$md_ref_palette_neutral-variant20: #322f37;
+$md_ref_palette_neutral-variant30: #49454f;
+$md_ref_palette_neutral-variant40: #605d66;
+$md_ref_palette_neutral-variant50: #79747e;
+$md_ref_palette_neutral-variant60: #938f99;
+$md_ref_palette_neutral-variant70: #aea9b4;
+$md_ref_palette_neutral-variant80: #cac4d0;
+$md_ref_palette_neutral-variant90: #e7e0ec;
+$md_ref_palette_neutral-variant95: #f5eefa;
+$md_ref_palette_neutral-variant99: #fffbfe;
+$md_ref_palette_neutral-variant100: #ffffff;
+$md_ref_palette_neutral-variant98: #f8f9ff;

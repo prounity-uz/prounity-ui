@@ -1,0 +1,132 @@
+:host {
+  --width: 210px;
+  --height: 56px;
+  --background: #{$md_sys_color_surface-container-highest};
+  --color: #{$md_sys_color_surface-tint};
+  --padding-top: 4px;
+  --padding-bottom: 4px;
+  --padding-left: 16px;
+  --padding-right: 16px;
+  --border-radius: #{$md_sys_shape_corner_extra-small_top};
+
+  display: inline-block;
+  font-family: $typeface_plain;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  min-width: var(--width);
+  height: var(--height);
+  background: var(--background);
+  color: var(--color);
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+.native-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    outline: none;
+  }
+
+  .input-text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .label-text {
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+    
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    line-height: 24px;
+    top: 12px;
+  }
+}
+
+.active-indicator {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #{$md_sys_color_on_surface_variant};
+  bottom: 0;
+  z-index: 2;
+  transition: height 0.2s ease-in-out;
+  left: 0;
+}
+
+.input-wrapper.focused .active-indicator {
+  height: 3px;
+}
+
+.input-wrapper.focused .label-text {
+  font-size: 12px;
+  line-height: 16px;
+  top: 4px;
+}
+
+.supporting-text {
+  padding: 4px 16px 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $md_sys_color_on-surface-variant;
+}
+
+slot[name="start"],
+slot[name="end"] {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  font-size: 24px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.has-leading-icon slot[name="start"] {
+  display: block;
+}
+
+.has-leading-icon {
+  padding-left: 0;
+}
+
+.has-trailing-icon slot[name="end"] {
+  display: block;
+}
+
+.has-trailing-icon {
+  padding-right: 0;
+}

@@ -42,7 +42,8 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "deploy": "npm run build && npm link && npm link pro-unity-ui-stencil && cd ../react-library && npm run build && cd ../stencil-library && echo 'Deployed to npm!'"
   },
   "devDependencies": {
     "@stencil/core": "^4.7.0",

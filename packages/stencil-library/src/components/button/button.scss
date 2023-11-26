@@ -1,0 +1,110 @@
+@import './button.vars';
+
+// Button
+
+:host {
+  --button-icon-offset: #{$button-icon-offset};
+  --button-icon-size: #{$button-icon-size};
+  
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  vertical-align: top;
+  font-kerning: none;
+  color: var(--color);
+}
+
+:host(.button-elevated) {
+  --background: #{$md_sys_color_surface-container-low};
+  --color: #{$md_sys_color_surface-tint};
+}
+
+:host(.button-filled) {
+  --background: #{$md_sys_color_primary};
+  --color: #{$md_sys_color_on-primary};
+}
+
+:host(.button-filled-tonal) {
+  --background: #{$md_sys_color_secondary-container};
+  --color: #{$md_sys_color_on-secondary-container};
+}
+
+:host(.button-outlined) {
+  --background: transparent;
+  --color: #{$md_sys_color_on-surface};
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #{$md_sys_color_outline};
+}
+
+:host(.button-text) {
+  --background: transparent;
+  --color: #{$md_sys_color_primary};
+}
+
+.pu-button {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-decoration: inherit;
+  text-indent: inherit;
+  text-overflow: inherit;
+  text-transform: inherit;
+  text-align: inherit;
+  white-space: inherit;
+  color: inherit;
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  contain: layout style;
+  cursor: pointer;
+  appearance: none;
+  
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+
+  outline: none;
+  box-sizing: border-box;
+  
+  border-radius: var(--btn-shape);
+  padding-left: var(--btn-padding-left);
+  padding-right: var(--btn-padding-right);
+  background-color: var(--background);
+  color: var(--color);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+  opacity: var(--opacity);
+  overflow: var(--overflow);
+}
+
+// Full Button
+// --------------------------------------------------
+
+:host(.button-full) {
+  display: block;
+}
+
+// :host(.button-full) .button-native {
+//   @include margin-horizontal(0);
+
+//   width: 100%;
+
+//   contain: content;
+// }
+
+.pu-button-inner {
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  gap: $button-icon-offset;
+  position: relative;
+}

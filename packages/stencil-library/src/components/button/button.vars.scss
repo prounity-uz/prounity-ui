@@ -1,0 +1,20 @@
+// Button
+
+/// @prop - Button container height
+$button-height: 40px !default;
+
+/// @prop - Button container shape
+$button-shape: calc($button-height / 2) !default;
+
+/// @prop - Button padding left
+$button-padding-left: 24px !default;
+
+/// @prop - Button padding right
+$button-padding-right: 24px !default;
+
+/// @prop - Button icon size
+$button-icon-size: 18px !default;
+
+/// @prop - Button icon offset
+$button-icon-offset: 8px !default;
+

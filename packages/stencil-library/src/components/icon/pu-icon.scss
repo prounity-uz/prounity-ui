@@ -1,0 +1,37 @@
+:host {
+  display: inline-block;
+
+  font-family: var(--md-sys-icon-font);
+  text-transform: none;
+  
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+:host([slot='start']) {
+  margin-left: calc(var(--button-icon-offset) * -1);
+}
+
+:host([slot='end']) {
+  margin-right: calc(var(--button-icon-offset) * -1);
+}
+
+:host(.outlined) {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+:host(.filled) {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}

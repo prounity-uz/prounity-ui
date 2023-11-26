@@ -5,96 +5,38 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Color } from "./interface";
+export { Color } from "./interface";
 export namespace Components {
+    interface PuBadge {
+    }
     interface PuButton {
+        "buttonType": string;
+        "color"?: Color;
         "disabled": boolean;
-        "type": 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
-    }
-    interface PuCard {
-        "disabled": boolean;
-        "type": 'filled' | 'outlined' | 'elevated';
-    }
-    interface PuCheckbox {
-        "disabled": boolean;
-        "hasError": boolean;
-    }
-    interface PuChip {
-        "disabled": boolean;
-        "type": 'assist' | 'filter' | 'input' | 'suggestion';
-    }
-    interface PuDivider {
-    }
-    interface PuFab {
-        "color": 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
-        "disabled": boolean;
-        "icon": string;
-        "type": 'small' | 'large' | 'elevated' | 'add' | 'text';
+        "expand"?: 'full' | 'block';
+        "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
     }
     interface PuIcon {
-        "type": 'filled' | 'outlined';
+        "fill"?: 'outlined' | 'filled';
     }
-    interface PuIconButtons {
+    interface PuInput {
         "disabled": boolean;
-        "tooltip": string;
-        "type": 'standart' | 'contained';
-    }
-    interface PuLists {
-    }
-    interface PuNavigationDrawer {
-    }
-    interface PuRadioButton {
-        "checked": boolean;
-        "disabled": boolean;
-    }
-    interface PuRippleEffect {
-    }
-    interface PuSnack {
-        "titleMain": string;
-    }
-    interface PuText {
-        "type": 'display-text' | 'display-text-large' | 'display-text-small' |
-    'headline-text' | 'headline-text-large' | 'headline-text-small' |
-    'title-text' | 'title-text-large' | 'title-text-small' |
-    'body-text' | 'body-text-large' | 'body-text-small' |
-    'label-text' | 'label-text-large' | 'label-text-small';
+        "placeholder"?: string;
     }
 }
 declare global {
+    interface HTMLPuBadgeElement extends Components.PuBadge, HTMLStencilElement {
+    }
+    var HTMLPuBadgeElement: {
+        prototype: HTMLPuBadgeElement;
+        new (): HTMLPuBadgeElement;
+    };
     interface HTMLPuButtonElement extends Components.PuButton, HTMLStencilElement {
     }
     var HTMLPuButtonElement: {
         prototype: HTMLPuButtonElement;
         new (): HTMLPuButtonElement;
-    };
-    interface HTMLPuCardElement extends Components.PuCard, HTMLStencilElement {
-    }
-    var HTMLPuCardElement: {
-        prototype: HTMLPuCardElement;
-        new (): HTMLPuCardElement;
-    };
-    interface HTMLPuCheckboxElement extends Components.PuCheckbox, HTMLStencilElement {
-    }
-    var HTMLPuCheckboxElement: {
-        prototype: HTMLPuCheckboxElement;
-        new (): HTMLPuCheckboxElement;
-    };
-    interface HTMLPuChipElement extends Components.PuChip, HTMLStencilElement {
-    }
-    var HTMLPuChipElement: {
-        prototype: HTMLPuChipElement;
-        new (): HTMLPuChipElement;
-    };
-    interface HTMLPuDividerElement extends Components.PuDivider, HTMLStencilElement {
-    }
-    var HTMLPuDividerElement: {
-        prototype: HTMLPuDividerElement;
-        new (): HTMLPuDividerElement;
-    };
-    interface HTMLPuFabElement extends Components.PuFab, HTMLStencilElement {
-    }
-    var HTMLPuFabElement: {
-        prototype: HTMLPuFabElement;
-        new (): HTMLPuFabElement;
     };
     interface HTMLPuIconElement extends Components.PuIcon, HTMLStencilElement {
     }
@@ -102,153 +44,51 @@ declare global {
         prototype: HTMLPuIconElement;
         new (): HTMLPuIconElement;
     };
-    interface HTMLPuIconButtonsElement extends Components.PuIconButtons, HTMLStencilElement {
+    interface HTMLPuInputElement extends Components.PuInput, HTMLStencilElement {
     }
-    var HTMLPuIconButtonsElement: {
-        prototype: HTMLPuIconButtonsElement;
-        new (): HTMLPuIconButtonsElement;
-    };
-    interface HTMLPuListsElement extends Components.PuLists, HTMLStencilElement {
-    }
-    var HTMLPuListsElement: {
-        prototype: HTMLPuListsElement;
-        new (): HTMLPuListsElement;
-    };
-    interface HTMLPuNavigationDrawerElement extends Components.PuNavigationDrawer, HTMLStencilElement {
-    }
-    var HTMLPuNavigationDrawerElement: {
-        prototype: HTMLPuNavigationDrawerElement;
-        new (): HTMLPuNavigationDrawerElement;
-    };
-    interface HTMLPuRadioButtonElement extends Components.PuRadioButton, HTMLStencilElement {
-    }
-    var HTMLPuRadioButtonElement: {
-        prototype: HTMLPuRadioButtonElement;
-        new (): HTMLPuRadioButtonElement;
-    };
-    interface HTMLPuRippleEffectElement extends Components.PuRippleEffect, HTMLStencilElement {
-    }
-    var HTMLPuRippleEffectElement: {
-        prototype: HTMLPuRippleEffectElement;
-        new (): HTMLPuRippleEffectElement;
-    };
-    interface HTMLPuSnackElement extends Components.PuSnack, HTMLStencilElement {
-    }
-    var HTMLPuSnackElement: {
-        prototype: HTMLPuSnackElement;
-        new (): HTMLPuSnackElement;
-    };
-    interface HTMLPuTextElement extends Components.PuText, HTMLStencilElement {
-    }
-    var HTMLPuTextElement: {
-        prototype: HTMLPuTextElement;
-        new (): HTMLPuTextElement;
+    var HTMLPuInputElement: {
+        prototype: HTMLPuInputElement;
+        new (): HTMLPuInputElement;
     };
     interface HTMLElementTagNameMap {
+        "pu-badge": HTMLPuBadgeElement;
         "pu-button": HTMLPuButtonElement;
-        "pu-card": HTMLPuCardElement;
-        "pu-checkbox": HTMLPuCheckboxElement;
-        "pu-chip": HTMLPuChipElement;
-        "pu-divider": HTMLPuDividerElement;
-        "pu-fab": HTMLPuFabElement;
         "pu-icon": HTMLPuIconElement;
-        "pu-icon-buttons": HTMLPuIconButtonsElement;
-        "pu-lists": HTMLPuListsElement;
-        "pu-navigation-drawer": HTMLPuNavigationDrawerElement;
-        "pu-radio-button": HTMLPuRadioButtonElement;
-        "pu-ripple-effect": HTMLPuRippleEffectElement;
-        "pu-snack": HTMLPuSnackElement;
-        "pu-text": HTMLPuTextElement;
+        "pu-input": HTMLPuInputElement;
     }
 }
 declare namespace LocalJSX {
+    interface PuBadge {
+    }
     interface PuButton {
+        "buttonType"?: string;
+        "color"?: Color;
         "disabled"?: boolean;
-        "type"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
-    }
-    interface PuCard {
-        "disabled"?: boolean;
-        "type"?: 'filled' | 'outlined' | 'elevated';
-    }
-    interface PuCheckbox {
-        "disabled"?: boolean;
-        "hasError"?: boolean;
-    }
-    interface PuChip {
-        "disabled"?: boolean;
-        "type"?: 'assist' | 'filter' | 'input' | 'suggestion';
-    }
-    interface PuDivider {
-    }
-    interface PuFab {
-        "color"?: 'surface' | 'primary' | 'secondary' | 'tertiary' | 'color' | 'text';
-        "disabled"?: boolean;
-        "icon"?: string;
-        "type"?: 'small' | 'large' | 'elevated' | 'add' | 'text';
+        "expand"?: 'full' | 'block';
+        "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
     }
     interface PuIcon {
-        "type"?: 'filled' | 'outlined';
+        "fill"?: 'outlined' | 'filled';
     }
-    interface PuIconButtons {
+    interface PuInput {
         "disabled"?: boolean;
-        "tooltip"?: string;
-        "type"?: 'standart' | 'contained';
-    }
-    interface PuLists {
-    }
-    interface PuNavigationDrawer {
-    }
-    interface PuRadioButton {
-        "checked"?: boolean;
-        "disabled"?: boolean;
-    }
-    interface PuRippleEffect {
-    }
-    interface PuSnack {
-        "titleMain"?: string;
-    }
-    interface PuText {
-        "type"?: 'display-text' | 'display-text-large' | 'display-text-small' |
-    'headline-text' | 'headline-text-large' | 'headline-text-small' |
-    'title-text' | 'title-text-large' | 'title-text-small' |
-    'body-text' | 'body-text-large' | 'body-text-small' |
-    'label-text' | 'label-text-large' | 'label-text-small';
+        "placeholder"?: string;
     }
     interface IntrinsicElements {
+        "pu-badge": PuBadge;
         "pu-button": PuButton;
-        "pu-card": PuCard;
-        "pu-checkbox": PuCheckbox;
-        "pu-chip": PuChip;
-        "pu-divider": PuDivider;
-        "pu-fab": PuFab;
         "pu-icon": PuIcon;
-        "pu-icon-buttons": PuIconButtons;
-        "pu-lists": PuLists;
-        "pu-navigation-drawer": PuNavigationDrawer;
-        "pu-radio-button": PuRadioButton;
-        "pu-ripple-effect": PuRippleEffect;
-        "pu-snack": PuSnack;
-        "pu-text": PuText;
+        "pu-input": PuInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "pu-badge": LocalJSX.PuBadge & JSXBase.HTMLAttributes<HTMLPuBadgeElement>;
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
-            "pu-card": LocalJSX.PuCard & JSXBase.HTMLAttributes<HTMLPuCardElement>;
-            "pu-checkbox": LocalJSX.PuCheckbox & JSXBase.HTMLAttributes<HTMLPuCheckboxElement>;
-            "pu-chip": LocalJSX.PuChip & JSXBase.HTMLAttributes<HTMLPuChipElement>;
-            "pu-divider": LocalJSX.PuDivider & JSXBase.HTMLAttributes<HTMLPuDividerElement>;
-            "pu-fab": LocalJSX.PuFab & JSXBase.HTMLAttributes<HTMLPuFabElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
-            "pu-icon-buttons": LocalJSX.PuIconButtons & JSXBase.HTMLAttributes<HTMLPuIconButtonsElement>;
-            "pu-lists": LocalJSX.PuLists & JSXBase.HTMLAttributes<HTMLPuListsElement>;
-            "pu-navigation-drawer": LocalJSX.PuNavigationDrawer & JSXBase.HTMLAttributes<HTMLPuNavigationDrawerElement>;
-            "pu-radio-button": LocalJSX.PuRadioButton & JSXBase.HTMLAttributes<HTMLPuRadioButtonElement>;
-            "pu-ripple-effect": LocalJSX.PuRippleEffect & JSXBase.HTMLAttributes<HTMLPuRippleEffectElement>;
-            "pu-snack": LocalJSX.PuSnack & JSXBase.HTMLAttributes<HTMLPuSnackElement>;
-            "pu-text": LocalJSX.PuText & JSXBase.HTMLAttributes<HTMLPuTextElement>;
+            "pu-input": LocalJSX.PuInput & JSXBase.HTMLAttributes<HTMLPuInputElement>;
         }
     }
 }

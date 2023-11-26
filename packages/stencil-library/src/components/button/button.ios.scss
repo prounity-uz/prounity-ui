@@ -1,0 +1,137 @@
+:host {
+  --btn-height: 40px;
+  --btn-shape: 20px;
+  --icon-btn-size: 18px;
+  --icon-btn-margin-left: -8px;
+  --icon-btn-margin-right: 8px;
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@mixin button-hover($background-color, $shadow-value: 0) {
+  &:hover {
+    box-shadow: box-shadow($shadow-value);
+  }
+
+  &:hover::after {
+    background: rgba($color: $background-color, $alpha: 0.08);
+  }
+}
+
+@mixin button-active($background-color, $shadow-value: 0) {
+  &:active {
+    box-shadow: box-shadow($shadow-value);
+    background: rgba($color: $background-color, $alpha: 0.1);
+  }
+}
+
+@mixin button-disabled() {
+  &:disabled {
+    background: rgba($color: $color-on-surface, $alpha: 0.12);
+    box-shadow: box-shadow(0);
+    color: rgba($color: $color-on-surface, $alpha: 0.38);
+  }
+}
+
+.pu-button {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  height: var(--btn-height);
+  border-radius: var(--btn-shape);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  
+  @include md_sys_typescale_label-large;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.pu-button-inner {
+  display: flex;
+}
+
+.pu-button--elevated {
+  color: $md_sys_color_surface-tint;
+  background: $md_sys_color_surface-container-low;
+  box-shadow: box-shadow(1);
+
+  // @include button-hover($color-primary, 2);
+  
+  // @include button-active($color-primary, 1);
+
+  // @include button-disabled();
+}
+
+.pu-button--filled {
+  background: $md_sys_color_primary;
+  color: $md_sys_color_on-primary;
+
+  // @include button-hover($color-on-primary, 1);
+  
+  // @include button-active($color-on-primary, 0);
+
+  // @include button-disabled();
+}
+
+// .pu-button--filled-tonal {
+//   background: $color-secondary-container;
+//   color: $color-on-secondary-container;
+
+//   @include button-hover($color-on-secondary-container, 1);
+
+//   @include button-active($color-on-secondary-container, 0);
+
+//   @include button-disabled();
+// }
+
+// .pu-button--outlined {
+//   background-color: transparent;
+//   color: $color-primary;
+//   border: $outline-width solid $color-outline;
+
+//   @include button-hover($color-primary, 0);
+
+//   @include button-active($color-primary, 0);
+//   &:active {
+//     border: $outline-width solid $color-outline-variant;
+//   }
+
+//   @include button-disabled();
+//   &:disabled {
+//     border: $outline-width solid rgba($color: $color-on-surface, $alpha: 0.12);
+//     background: transparent;
+//   }
+// }
+
+// .pu-button--text {
+//   color: $color-primary;
+//   background-color: transparent;
+
+//   @include button-hover($color-primary, 0);
+
+//   @include button-active($color-primary, 0);
+
+//   @include button-disabled();
+//   &:disabled {
+//     background: transparent;
+//   }
+// }
