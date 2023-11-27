@@ -10,12 +10,16 @@ export { Color } from "./interface";
 export namespace Components {
     interface PuBadge {
     }
+    interface PuBottomAppBars {
+    }
     interface PuButton {
         "buttonType": string;
         "color"?: Color;
         "disabled": boolean;
         "expand"?: 'full' | 'block';
         "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
+    }
+    interface PuCard {
     }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
@@ -26,6 +30,8 @@ export namespace Components {
     }
     interface PuNavigationBar {
     }
+    interface PuTabs {
+    }
 }
 declare global {
     interface HTMLPuBadgeElement extends Components.PuBadge, HTMLStencilElement {
@@ -34,11 +40,23 @@ declare global {
         prototype: HTMLPuBadgeElement;
         new (): HTMLPuBadgeElement;
     };
+    interface HTMLPuBottomAppBarsElement extends Components.PuBottomAppBars, HTMLStencilElement {
+    }
+    var HTMLPuBottomAppBarsElement: {
+        prototype: HTMLPuBottomAppBarsElement;
+        new (): HTMLPuBottomAppBarsElement;
+    };
     interface HTMLPuButtonElement extends Components.PuButton, HTMLStencilElement {
     }
     var HTMLPuButtonElement: {
         prototype: HTMLPuButtonElement;
         new (): HTMLPuButtonElement;
+    };
+    interface HTMLPuCardElement extends Components.PuCard, HTMLStencilElement {
+    }
+    var HTMLPuCardElement: {
+        prototype: HTMLPuCardElement;
+        new (): HTMLPuCardElement;
     };
     interface HTMLPuIconElement extends Components.PuIcon, HTMLStencilElement {
     }
@@ -58,16 +76,27 @@ declare global {
         prototype: HTMLPuNavigationBarElement;
         new (): HTMLPuNavigationBarElement;
     };
+    interface HTMLPuTabsElement extends Components.PuTabs, HTMLStencilElement {
+    }
+    var HTMLPuTabsElement: {
+        prototype: HTMLPuTabsElement;
+        new (): HTMLPuTabsElement;
+    };
     interface HTMLElementTagNameMap {
         "pu-badge": HTMLPuBadgeElement;
+        "pu-bottom-app-bars": HTMLPuBottomAppBarsElement;
         "pu-button": HTMLPuButtonElement;
+        "pu-card": HTMLPuCardElement;
         "pu-icon": HTMLPuIconElement;
         "pu-input": HTMLPuInputElement;
         "pu-navigation-bar": HTMLPuNavigationBarElement;
+        "pu-tabs": HTMLPuTabsElement;
     }
 }
 declare namespace LocalJSX {
     interface PuBadge {
+    }
+    interface PuBottomAppBars {
     }
     interface PuButton {
         "buttonType"?: string;
@@ -75,6 +104,8 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "expand"?: 'full' | 'block';
         "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
+    }
+    interface PuCard {
     }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
@@ -85,12 +116,17 @@ declare namespace LocalJSX {
     }
     interface PuNavigationBar {
     }
+    interface PuTabs {
+    }
     interface IntrinsicElements {
         "pu-badge": PuBadge;
+        "pu-bottom-app-bars": PuBottomAppBars;
         "pu-button": PuButton;
+        "pu-card": PuCard;
         "pu-icon": PuIcon;
         "pu-input": PuInput;
         "pu-navigation-bar": PuNavigationBar;
+        "pu-tabs": PuTabs;
     }
 }
 export { LocalJSX as JSX };
@@ -98,10 +134,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "pu-badge": LocalJSX.PuBadge & JSXBase.HTMLAttributes<HTMLPuBadgeElement>;
+            "pu-bottom-app-bars": LocalJSX.PuBottomAppBars & JSXBase.HTMLAttributes<HTMLPuBottomAppBarsElement>;
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
+            "pu-card": LocalJSX.PuCard & JSXBase.HTMLAttributes<HTMLPuCardElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-input": LocalJSX.PuInput & JSXBase.HTMLAttributes<HTMLPuInputElement>;
             "pu-navigation-bar": LocalJSX.PuNavigationBar & JSXBase.HTMLAttributes<HTMLPuNavigationBarElement>;
+            "pu-tabs": LocalJSX.PuTabs & JSXBase.HTMLAttributes<HTMLPuTabsElement>;
         }
     }
 }

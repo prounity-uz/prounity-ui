@@ -13,6 +13,7 @@
   padding: 0 8px;
   font-family: $typeface_plain;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .pu-navigation-bar {
@@ -22,7 +23,12 @@
   justify-content: center;
 }
 
+.pu-navigation-bar-active .pu-navigation-bar-button {
+  background-color: $md_sys_color_secondary-container;
+}
+
 .pu-navigation-bar-button {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 64px;
@@ -32,7 +38,11 @@
   align-items: center;
   font-size: 24px;
 
-  background-color: $md_sys_color_secondary-container;
+  pu-badge {
+    position: absolute;
+    top: 2px;
+    right: 12px;
+  }
 }
 
 .pu-navigation-bar-label {

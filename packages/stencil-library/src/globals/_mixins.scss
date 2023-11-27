@@ -13,6 +13,14 @@
   line-height: $md_sys_typescale_label-large_line-height;
 }
 
+@mixing md_sys_typescale_label-medium {
+  // font-family: $md_ref_typeface_plain;
+  // font-weight: $md_sys_typescale_label-large_weight;
+  // font-size: $md_sys_typescale_label-large_size;
+  // letter-spacing: $md_sys_typescale_label-large_tracking;
+  // line-height: $md_sys_typescale_label-large_line-height;
+}
+
 @mixin label-text-small {
   font-weight: 500;
   font-size: 11px;

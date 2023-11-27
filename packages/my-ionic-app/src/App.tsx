@@ -43,13 +43,18 @@ import UserProfile from "./pages/User-profile/User-profile";
 import PlayMusic from "./pages/Play-music/Play-music";
 import "./App.css";
 import ProfileEdit from "./pages/Profile-edit/Profile-edit";
+import { PuNavigationBar, defineCustomElements } from "pro-unity-ui";
+defineCustomElements();
+
 setupIonicReact();
 
 const App: React.FC = () => {
   return (
-    <IonApp>
+    <IonApp style={{
+      paddingBottom: "80px"
+    }}>
       <IonReactRouter>
-        <IonTabs>
+        {/* <IonTabs>
           <IonRouterOutlet>
             <Route exact path="/home" component={Home} />
             <Route exact path="/favourite" component={Favourite} />
@@ -58,6 +63,7 @@ const App: React.FC = () => {
             <Route exact path="/play-music" component={PlayMusic} />
             <Route exact path="/profile-edit" component={ProfileEdit} />
           </IonRouterOutlet>
+          <PuNavigationBar></PuNavigationBar>
           <IonTabBar slot="bottom" className="ion-tab-bar">
             <IonTabButton tab="home" href="/home" className="tab-button">
               <svg
@@ -170,13 +176,19 @@ const App: React.FC = () => {
               </svg>
             </IonTabButton>
           </IonTabBar>
-        </IonTabs>
+        </IonTabs> */}
+        <Route exact path="/home" component={Home}></Route>
         <Route exact path="/" component={Welcome}></Route>
         <Route exact path="/sign-up" component={SignUp}></Route>
         <Route exact path="/sign-in" component={SignIn} />
         <Route exact path="/notification" component={Notification} />
         <Route exact path="/world-music" component={WorldMusic} />
       </IonReactRouter>
+      <PuNavigationBar style={{
+        position: "fixed",
+        bottom: "0px",
+        width: "100%"
+      }}></PuNavigationBar>
     </IonApp>
   );
 };

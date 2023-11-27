@@ -12,28 +12,46 @@ export class PuNavigationBar {
   render() {
     return (
       <Host>
-        <div class="pu-navigation-bar">
+        <div class="pu-navigation-bar pu-navigation-bar-active">
           <div class="pu-navigation-bar-button">
-            <pu-icon>star</pu-icon>
+            <pu-icon>home</pu-icon>
+            <pu-badge>99</pu-badge>
           </div>
           <div class="pu-navigation-bar-label">
-            Label
+            Home
           </div>
         </div>
         <div class="pu-navigation-bar">
           <div class="pu-navigation-bar-button">
-            <pu-icon>explore</pu-icon>
+            <pu-icon>favorite</pu-icon>
           </div>
           <div class="pu-navigation-bar-label">
-            Explore
+            Favorite
           </div>
         </div>
         <div class="pu-navigation-bar">
           <div class="pu-navigation-bar-button">
-            <pu-icon>person</pu-icon>
+            <pu-icon>play_circle</pu-icon>
+            <pu-badge></pu-badge>
           </div>
           <div class="pu-navigation-bar-label">
-            Account
+            Playing now
+          </div>
+        </div>
+        <div class="pu-navigation-bar">
+          <div class="pu-navigation-bar-button">
+            <pu-icon>download</pu-icon>
+          </div>
+          <div class="pu-navigation-bar-label">
+            Downloads
+          </div>
+        </div>
+        <div class="pu-navigation-bar">
+          <div class="pu-navigation-bar-button">
+            <pu-icon>account_circle</pu-icon>
+          </div>
+          <div class="pu-navigation-bar-label">
+            Profile
           </div>
         </div>
       </Host>

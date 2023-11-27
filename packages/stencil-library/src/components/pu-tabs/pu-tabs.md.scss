@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  --background-color: #{$md_sys_color_surface};
+  --height: 48px;
+  --height-with-icon: 64px;
+  width: 100%;
+  height: var(--height-with-icon);
+  // height: var(--height);
+  background-color: var(--background-color);
+
+  font-family: $typeface_plain;
+  box-sizing: border-box;
+  border-bottom: 1px solid $md_sys_color_on_surface_variant;
+}
+
+.pu-tabs {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  justify-content: space-between;
+}
+
+.pu-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.pu-tab-icon {
+  font-size: 24px;
+}
+
+.pu-tab-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 2px;
+}
+
+.pu-tab-indicator {
+  width: 100%;
+  height: 3px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  background: $md_sys_color_primary;
+  margin-top: 5px;
+}

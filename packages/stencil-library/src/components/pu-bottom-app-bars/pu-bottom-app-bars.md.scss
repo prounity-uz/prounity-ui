@@ -1,0 +1,37 @@
+:host {
+  display: block;
+
+  --background: #{$md_sys_color_surface-container};
+  --color: #{$md_sys_color_surface-tint};
+
+  background-color: var(--background);
+  color: var(--color);
+  height: 80px;
+  padding: 16px 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-bar-leading-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.app-bar-leading-icons pu-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-bar-leading-icons pu-fab {
+  margin-left: auto;
+  width: 58px;
+  height: 58px;
+  background-color: #E8DEF8;
+  border-radius: 16px;
+}

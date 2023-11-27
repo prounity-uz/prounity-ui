@@ -1,10 +1,18 @@
 $md_ref_typeface_plain: 'Roboto';
+
 $md_sys_typescale_label-large_font: $md_ref_typeface_plain;
 $md_sys_typescale_label-large_line-height: 20px;
 $md_sys_typescale_label-large_size: 14px;
 $md_ref_typeface_weight-medium: 500;
 $md_sys_typescale_label-large_weight: md_ref_typeface_weight-medium;
 $md_sys_typescale_label-large_tracking: 0.1px;
+
+// $md_sys_typescale_label-medium_font: $md_ref_typeface_plain;
+// $md_sys_typescale_label-medium_line-height: 24px;
+// $md_sys_typescale_label-medium_size: 14px;
+// $md_ref_typeface_weight-medium: 500;
+// $md_sys_typescale_label-medium_weight: md_ref_typeface_weight-medium;
+// $md_sys_typescale_label-medium_tracking: 0.1px;
 
 // _pu-display-text {
 //   color: red;
