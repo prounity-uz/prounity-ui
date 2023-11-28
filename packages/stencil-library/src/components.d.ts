@@ -34,6 +34,8 @@ export namespace Components {
         "months": string[];
         "weekDays": string[];
     }
+    interface PuDialog {
+    }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
     }
@@ -95,6 +97,12 @@ declare global {
         prototype: HTMLPuDatePickerElement;
         new (): HTMLPuDatePickerElement;
     };
+    interface HTMLPuDialogElement extends Components.PuDialog, HTMLStencilElement {
+    }
+    var HTMLPuDialogElement: {
+        prototype: HTMLPuDialogElement;
+        new (): HTMLPuDialogElement;
+    };
     interface HTMLPuIconElement extends Components.PuIcon, HTMLStencilElement {
     }
     var HTMLPuIconElement: {
@@ -128,6 +136,7 @@ declare global {
         "pu-checkbox": HTMLPuCheckboxElement;
         "pu-chips": HTMLPuChipsElement;
         "pu-date-picker": HTMLPuDatePickerElement;
+        "pu-dialog": HTMLPuDialogElement;
         "pu-icon": HTMLPuIconElement;
         "pu-input": HTMLPuInputElement;
         "pu-navigation-bar": HTMLPuNavigationBarElement;
@@ -161,6 +170,8 @@ declare namespace LocalJSX {
         "months"?: string[];
         "weekDays"?: string[];
     }
+    interface PuDialog {
+    }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
     }
@@ -181,6 +192,7 @@ declare namespace LocalJSX {
         "pu-checkbox": PuCheckbox;
         "pu-chips": PuChips;
         "pu-date-picker": PuDatePicker;
+        "pu-dialog": PuDialog;
         "pu-icon": PuIcon;
         "pu-input": PuInput;
         "pu-navigation-bar": PuNavigationBar;
@@ -199,6 +211,7 @@ declare module "@stencil/core" {
             "pu-checkbox": LocalJSX.PuCheckbox & JSXBase.HTMLAttributes<HTMLPuCheckboxElement>;
             "pu-chips": LocalJSX.PuChips & JSXBase.HTMLAttributes<HTMLPuChipsElement>;
             "pu-date-picker": LocalJSX.PuDatePicker & JSXBase.HTMLAttributes<HTMLPuDatePickerElement>;
+            "pu-dialog": LocalJSX.PuDialog & JSXBase.HTMLAttributes<HTMLPuDialogElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-input": LocalJSX.PuInput & JSXBase.HTMLAttributes<HTMLPuInputElement>;
             "pu-navigation-bar": LocalJSX.PuNavigationBar & JSXBase.HTMLAttributes<HTMLPuNavigationBarElement>;
