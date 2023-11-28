@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+
+  width: 100%;
+  max-width: 412px;
+  height: 221px;
+  padding: 8px 16px;
+  gap: 8px;
+
+}
+
+.carousel-item {
+  width: 100px;
+  height: 100%;
+  border-radius: 28px;
+
+  &:nth-child(2) {
+    background-color: #fff;
+    width: 50%;
+  }
+
+  &:nth-child(3) {
+    background-color: #fff;
+    width: 30%;
+  }
+
+  &:nth-child(4) {
+    background-color: #fff;
+    width: 20%;
+  }
+}

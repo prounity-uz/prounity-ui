@@ -21,6 +21,19 @@ export namespace Components {
     }
     interface PuCard {
     }
+    interface PuCarousel {
+        "item": number;
+    }
+    interface PuCheckbox {
+        "disabled": boolean;
+    }
+    interface PuChips {
+        "type": "label" | "trailing" | 'text';
+    }
+    interface PuDatePicker {
+        "months": string[];
+        "weekDays": string[];
+    }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
     }
@@ -58,6 +71,30 @@ declare global {
         prototype: HTMLPuCardElement;
         new (): HTMLPuCardElement;
     };
+    interface HTMLPuCarouselElement extends Components.PuCarousel, HTMLStencilElement {
+    }
+    var HTMLPuCarouselElement: {
+        prototype: HTMLPuCarouselElement;
+        new (): HTMLPuCarouselElement;
+    };
+    interface HTMLPuCheckboxElement extends Components.PuCheckbox, HTMLStencilElement {
+    }
+    var HTMLPuCheckboxElement: {
+        prototype: HTMLPuCheckboxElement;
+        new (): HTMLPuCheckboxElement;
+    };
+    interface HTMLPuChipsElement extends Components.PuChips, HTMLStencilElement {
+    }
+    var HTMLPuChipsElement: {
+        prototype: HTMLPuChipsElement;
+        new (): HTMLPuChipsElement;
+    };
+    interface HTMLPuDatePickerElement extends Components.PuDatePicker, HTMLStencilElement {
+    }
+    var HTMLPuDatePickerElement: {
+        prototype: HTMLPuDatePickerElement;
+        new (): HTMLPuDatePickerElement;
+    };
     interface HTMLPuIconElement extends Components.PuIcon, HTMLStencilElement {
     }
     var HTMLPuIconElement: {
@@ -87,6 +124,10 @@ declare global {
         "pu-bottom-app-bars": HTMLPuBottomAppBarsElement;
         "pu-button": HTMLPuButtonElement;
         "pu-card": HTMLPuCardElement;
+        "pu-carousel": HTMLPuCarouselElement;
+        "pu-checkbox": HTMLPuCheckboxElement;
+        "pu-chips": HTMLPuChipsElement;
+        "pu-date-picker": HTMLPuDatePickerElement;
         "pu-icon": HTMLPuIconElement;
         "pu-input": HTMLPuInputElement;
         "pu-navigation-bar": HTMLPuNavigationBarElement;
@@ -107,6 +148,19 @@ declare namespace LocalJSX {
     }
     interface PuCard {
     }
+    interface PuCarousel {
+        "item"?: number;
+    }
+    interface PuCheckbox {
+        "disabled"?: boolean;
+    }
+    interface PuChips {
+        "type"?: "label" | "trailing" | 'text';
+    }
+    interface PuDatePicker {
+        "months"?: string[];
+        "weekDays"?: string[];
+    }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
     }
@@ -123,6 +177,10 @@ declare namespace LocalJSX {
         "pu-bottom-app-bars": PuBottomAppBars;
         "pu-button": PuButton;
         "pu-card": PuCard;
+        "pu-carousel": PuCarousel;
+        "pu-checkbox": PuCheckbox;
+        "pu-chips": PuChips;
+        "pu-date-picker": PuDatePicker;
         "pu-icon": PuIcon;
         "pu-input": PuInput;
         "pu-navigation-bar": PuNavigationBar;
@@ -137,6 +195,10 @@ declare module "@stencil/core" {
             "pu-bottom-app-bars": LocalJSX.PuBottomAppBars & JSXBase.HTMLAttributes<HTMLPuBottomAppBarsElement>;
             "pu-button": LocalJSX.PuButton & JSXBase.HTMLAttributes<HTMLPuButtonElement>;
             "pu-card": LocalJSX.PuCard & JSXBase.HTMLAttributes<HTMLPuCardElement>;
+            "pu-carousel": LocalJSX.PuCarousel & JSXBase.HTMLAttributes<HTMLPuCarouselElement>;
+            "pu-checkbox": LocalJSX.PuCheckbox & JSXBase.HTMLAttributes<HTMLPuCheckboxElement>;
+            "pu-chips": LocalJSX.PuChips & JSXBase.HTMLAttributes<HTMLPuChipsElement>;
+            "pu-date-picker": LocalJSX.PuDatePicker & JSXBase.HTMLAttributes<HTMLPuDatePickerElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-input": LocalJSX.PuInput & JSXBase.HTMLAttributes<HTMLPuInputElement>;
             "pu-navigation-bar": LocalJSX.PuNavigationBar & JSXBase.HTMLAttributes<HTMLPuNavigationBarElement>;

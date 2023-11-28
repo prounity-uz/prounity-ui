@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $md_ref_palette_neutral-variant30;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+
+}
+
+:host(.disabled) {
+  border: 2px solid $md_ref_palette_neutral-variant30;
+  background-color: $md_sys_color_on_surface;
+  opacity: 38%;
+}
+
+.icon {
+  display: flex;
+}
+
+.icon-hidden {
+  display: none;
+}
+
+:host(.checked) {
+  background-color: $md_sys_color_primary;
+}

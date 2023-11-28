@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  cursor: pointer;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid $md_ref_palette_neutral-variant50;
+  gap: 8px;
+
+  // font-style
+
+  color: $md_ref_palette_neutral-variant30;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+
+  // end-font-style
+
+}
+
+:host([aria-hidden]) {
+  display: none;
+}
+
+
+.icon-trailing-none {
+  display: none;
+}
