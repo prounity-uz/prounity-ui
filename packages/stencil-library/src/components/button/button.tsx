@@ -16,7 +16,7 @@ export class PuButton {
   @Prop({ reflect: true }) color?: Color = 'primary';
   @Prop({ mutable: true }) buttonType = 'button';
 
-  @Prop() fill?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text' = 'elevated';
+  @Prop() fill?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'dialog' | 'text' = 'elevated';
 
   @Prop({ reflect: true }) disabled = false;
   @Watch('disabled')

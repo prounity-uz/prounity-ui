@@ -17,7 +17,7 @@ export namespace Components {
         "color"?: Color;
         "disabled": boolean;
         "expand"?: 'full' | 'block';
-        "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
+        "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'dialog' | 'text';
     }
     interface PuCard {
     }
@@ -35,6 +35,10 @@ export namespace Components {
         "weekDays": string[];
     }
     interface PuDialog {
+    }
+    interface PuDivider {
+        "title": string;
+        "type": "divider" | "subheader";
     }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
@@ -103,6 +107,12 @@ declare global {
         prototype: HTMLPuDialogElement;
         new (): HTMLPuDialogElement;
     };
+    interface HTMLPuDividerElement extends Components.PuDivider, HTMLStencilElement {
+    }
+    var HTMLPuDividerElement: {
+        prototype: HTMLPuDividerElement;
+        new (): HTMLPuDividerElement;
+    };
     interface HTMLPuIconElement extends Components.PuIcon, HTMLStencilElement {
     }
     var HTMLPuIconElement: {
@@ -137,6 +147,7 @@ declare global {
         "pu-chips": HTMLPuChipsElement;
         "pu-date-picker": HTMLPuDatePickerElement;
         "pu-dialog": HTMLPuDialogElement;
+        "pu-divider": HTMLPuDividerElement;
         "pu-icon": HTMLPuIconElement;
         "pu-input": HTMLPuInputElement;
         "pu-navigation-bar": HTMLPuNavigationBarElement;
@@ -153,7 +164,7 @@ declare namespace LocalJSX {
         "color"?: Color;
         "disabled"?: boolean;
         "expand"?: 'full' | 'block';
-        "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'text';
+        "fill"?: 'filled' | 'filled-tonal' | 'outlined' | 'elevated' | 'dialog' | 'text';
     }
     interface PuCard {
     }
@@ -171,6 +182,10 @@ declare namespace LocalJSX {
         "weekDays"?: string[];
     }
     interface PuDialog {
+    }
+    interface PuDivider {
+        "title"?: string;
+        "type"?: "divider" | "subheader";
     }
     interface PuIcon {
         "fill"?: 'outlined' | 'filled';
@@ -193,6 +208,7 @@ declare namespace LocalJSX {
         "pu-chips": PuChips;
         "pu-date-picker": PuDatePicker;
         "pu-dialog": PuDialog;
+        "pu-divider": PuDivider;
         "pu-icon": PuIcon;
         "pu-input": PuInput;
         "pu-navigation-bar": PuNavigationBar;
@@ -212,6 +228,7 @@ declare module "@stencil/core" {
             "pu-chips": LocalJSX.PuChips & JSXBase.HTMLAttributes<HTMLPuChipsElement>;
             "pu-date-picker": LocalJSX.PuDatePicker & JSXBase.HTMLAttributes<HTMLPuDatePickerElement>;
             "pu-dialog": LocalJSX.PuDialog & JSXBase.HTMLAttributes<HTMLPuDialogElement>;
+            "pu-divider": LocalJSX.PuDivider & JSXBase.HTMLAttributes<HTMLPuDividerElement>;
             "pu-icon": LocalJSX.PuIcon & JSXBase.HTMLAttributes<HTMLPuIconElement>;
             "pu-input": LocalJSX.PuInput & JSXBase.HTMLAttributes<HTMLPuInputElement>;
             "pu-navigation-bar": LocalJSX.PuNavigationBar & JSXBase.HTMLAttributes<HTMLPuNavigationBarElement>;

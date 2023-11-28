@@ -1,3 +1,76 @@
-:host {
-  display: block;
+:host {}
+
+.close-dialog {
+  position: absolute;
+  background-color: #1D1B20;
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.dialog {
+  display: flex;
+  position: absolute;
+  top: auto;
+  left: auto;
+  z-index: 99;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 312px;
+  border-radius: 28px;
+  background: var(--m-3-sys-light-surface-container-high, #ECE6F0);
+
+
+  &-close {
+    width: 100%;
+    height: 10px;
+    background-color: #1D1B20;
+  }
+
+  .text-content {
+    display: flex;
+    padding: 24px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+
+    &_title {
+      color: var(--m-3-sys-light-on-surface, #1D1B20);
+      font-family: Roboto;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    &_description {
+      color: var(--m-3-sys-light-on-surface-variant, #49454F);
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: end;
+    align-self: stretch;
+    align-items: center;
+
+    &_buttons {
+      display: flex;
+      padding: 24px 24px 24px 8px;
+      gap: 8px;
+    }
+  }
+}
+
+.dialog-hide {
+  display: none;
 }
